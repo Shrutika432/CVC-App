@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bgcolorallpages"
+    android:layout_height="match_parent"
+    tools:context=".SigninActivity2">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/ImageSignUpForm"
+            android:src="@drawable/signup_form"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+        </ImageView>
+
+
+
+        <TextView
+            android:id="@+id/TextVolunteerForm"
+            android:layout_width="400dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:text="CVC Volunteering Form"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/heading">
+
+        </TextView>
+
+        <!--<TextView
+            android:id="@+id/Sci"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:text="School, College, Institution(IF ANY)"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="start"
+            android:textColor="@color/btn"
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/TextSchool"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="3dp"
+            android:textColorHint="@color/btn"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_textformat"
+            android:padding="6dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/bG"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:text="Please state your blood Group. *"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="start"
+            android:textColor="@color/btn"
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/TextBloodGroup"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="3dp"
+            android:textColorHint="@color/btn"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_textformat"
+            android:padding="6dp">
+
+        </TextView>-->
+
+        <TextView
+            android:id="@+id/Int"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="10dp"
+            android:text="Intrest, Hobby, Skills \nTell us about any of your skill which you are proud of!
+Dance, Music, Graphic Designing....Anything!"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/TextIntresrt"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="3dp"
+            android:textColorHint="@color/btn"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_textformat"
+            android:padding="6dp">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/CVC"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:text="From where did you come to know about CVC? *"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="start"
+            android:textColor="@color/btn"
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+        <RadioGroup
+
+            android:id="@+id/GroupRadio"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Radio4"
+                android:text="From Friends"
+                android:typeface="sans"
+                android:textColor="@color/heading" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Radio5"
+                android:text="Social Media"
+                android:typeface="sans"
+                android:textColor="@color/heading"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Radio6"
+                android:text="Newspapers and other print media"
+                android:typeface="sans"
+                android:textColor="@color/heading"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Radio7"
+                android:text="Other"
+                android:typeface="sans"
+                android:textColor="@color/heading"/>
+            <EditText
+                android:id="@+id/TextOther"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="3dp"
+                android:textColorHint="@color/btn"
+                android:inputType="textMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_textformat"
+                android:padding="6dp">
+
+            </EditText>
+        </RadioGroup>
+        <TextView
+            android:id="@+id/AtteEvePast"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Have you attended any of the CVC events in past?"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="start"
+            android:textColor="@color/btn"
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/TextPastEventsAttended"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="3dp"
+            android:textColorHint="@color/btn"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_textformat"
+            android:padding="6dp">
+
+        </EditText>
+        <TextView
+            android:id="@+id/VoluPastEve"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Have you Organised or volunteered in any of the CVC events \nin past?"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="start"
+            android:textColor="@color/btn"
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/TextVolunteerpastEvent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="3dp"
+            android:textColorHint="@color/btn"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_textformat"
+            android:padding="6dp">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/Share"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Would you like to shareanything else with CVC?"
+            android:layout_marginLeft="22dp"
+            android:layout_gravity="start"
+            android:textColor="@color/btn"
+            android:typeface="sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/TextShareAnything"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="3dp"
+            android:textColorHint="@color/btn"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_textformat"
+            android:padding="6dp">
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Button
+
+
+            android:id="@+id/BtnBack1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:background="@drawable/btn_bg"
+           android:text="Back"
+            android:textColor="@color/White"
+            android:textSize="15dp" />
+
+        <Button
+
+            android:id="@+id/BtnNext2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:background="@drawable/btn_bg"
+            android:text="Next"
+            android:textColor="@color/White"
+            android:textSize="15dp"/>
+<!--            android:layout_marginRight="16dp"-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

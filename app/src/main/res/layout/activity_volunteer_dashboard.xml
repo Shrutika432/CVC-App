@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C7E3FC"
+    tools:context=".volunteerDashboard">
+
+    <Button
+        android:id="@+id/btnAllCampaing"
+        android:layout_width="122dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/campaign"
+        app:layout_constraintBottom_toTopOf="@+id/UpcomingEvents"
+        app:layout_constraintEnd_toEndOf="@+id/btnDonation"
+        app:layout_constraintStart_toStartOf="@+id/btnDonation" />
+
+    <Button
+        android:id="@+id/btnDonation"
+        android:layout_width="100dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/donate"
+        app:layout_constraintBottom_toBottomOf="@+id/donateUs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpcomingEvents" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="113dp"
+        android:layout_height="124dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:background="@drawable/editprofile"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAllCampaing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnAllCampaing"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/CardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:background="@color/btn"
+        android:text="Volunteer Dashboard"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/UpcomingEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="265dp"
+        android:text="upcoming Events"
+        android:textColor="#2E7BC7"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/donateUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="264dp"
+        android:text="Donate Us"
+        android:textColor="#1E88E5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnDonation" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="My profile"
+        android:textColor="#1E88E5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditProfile"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
