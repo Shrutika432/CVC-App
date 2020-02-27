@@ -6,10 +6,12 @@
 
     <color name="White">#FFFFFF</color>
     <color name="Transparent">#00000000</color>
-    <color name="gradStart">#5F5BEE</color>
+    <color name="gradStart">#1E88E5</color>
     <color name="gradStop">#74B7F6</color>
-    <color name="bgcolorallpages">#D3E2F1</color>
-    <color name="btn">#2F65C9</color>
+    <color name="bgcolorallpages">#F6F7F9</color>
+    <color name="btn">#000000</color>
     <color name="heading">#000000</color>
     <color name="red">#990F0F</color>
+    <color name="blue">#08364E</color>
+    <color name="backgrounddashboard">#07354F</color>
 </resources>

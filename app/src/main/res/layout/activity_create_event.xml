@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bgcolorallpages"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Crtevt">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ImageCreateEventPost"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/create_event">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/TextCreateEvent"
+            android:layout_width="400dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="CVC Volunteering Form"
+            android:textAlignment="center"
+            android:textColor="@color/heading"
+            android:textSize="25dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Date"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/textEventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:focusable="false"
+            android:background="@drawable/login_textformat"
+            android:cursorVisible="false"
+            android:inputType="textMultiLine"
+            android:onClick="addDate"
+            android:padding="6dp"
+            android:textColorHint="@color/btn">
+
+        </EditText>
+
+
+        <TextView
+            android:id="@+id/EventDis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Event Discription"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/textDOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_textformat"
+            android:inputType="textMultiLine"
+            android:padding="6dp"
+            android:textColorHint="@color/btn">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/Nov"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="No of Volunteers"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/TextNov"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_textformat"
+            android:inputType="number"
+            android:padding="6dp"
+            android:shadowColor="#673AB7"
+            android:textColorHint="@color/btn">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/Area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Area"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/SpinnerAreaOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:padding="17dp">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/SpinnerArearesult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/Point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Points"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/TextPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_textformat"
+            android:inputType="number"
+            android:padding="6dp"
+            android:shadowColor="#673AB7"
+            android:textColorHint="@color/btn">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/BtnPost"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_style"
+            android:gravity="center"
+            android:text="Post"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="17dp"  />
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

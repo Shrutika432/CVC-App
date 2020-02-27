@@ -9,12 +9,13 @@
 
 
     <LinearLayout
+        android:id="@+id/textdonate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="639dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginBottom="11dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -57,6 +58,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/login_textformat"
+            android:cursorVisible="true"
             android:hint="Username"
             android:inputType="textPersonName"
             android:padding="10dp"
@@ -84,8 +86,17 @@
             android:layout_marginEnd="20dp"
             android:linksClickable="true"
             android:padding="10dp"
-            android:text="Forgot password?"
-            android:textColorLink="@color/White" />
+            android:text="@string/forgot_Password"
+            android:textColor="#1E88E5"
+            android:textColorLink="#1E88E5" />
+
+        <TextView
+            android:id="@+id/textDonate"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="right|top"
+            android:text="@string/want_to_donate_us"
+            android:textColor="#1E88E5" />
 
         <TextView
             android:id="@+id/tvLoginError"
@@ -103,9 +114,9 @@
             android:layout_marginTop="25dp"
             android:layout_marginRight="135dp"
             android:layout_marginBottom="25dp"
-            android:background="@drawable/btn_bg"
+            android:background="@drawable/button_style"
             android:hint="Log in"
-            android:onClick="login"
+
             android:textAllCaps="false"
             android:textColorHint="@color/White"
             android:textSize="21dp" />
@@ -125,18 +136,5 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btndonate2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="295dp"
-        android:layout_marginLeft="295dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:background="#D2DFEC"
-        android:text="Donate Us" />
+
 </RelativeLayout>

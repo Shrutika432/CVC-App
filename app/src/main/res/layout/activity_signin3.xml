@@ -5,7 +5,7 @@
     android:background="@color/bgcolorallpages"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SigninActivity3">
+    tools:context=".SignupActivity3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                 android:layout_gravity="start"
                 android:layout_marginRight="16dp"
                 android:gravity="center"
-                android:background="@drawable/btn_bg"
+                android:background="@drawable/button_style"
                 android:text="Back"
                 android:textColor="@color/White"
                 android:textSize="15dp" />
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:gravity="center"
-                android:background="@drawable/btn_bg"
+                android:background="@drawable/button_style"
                 android:text="Submit"
                 android:textColor="@color/White"
                 android:textSize="15dp"/>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/bgcolorallpages"
     android:layout_height="match_parent"
-    tools:context=".SigninActivity2">
+    tools:context=".SignupActivity2">
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -102,10 +102,11 @@
 
         <TextView
             android:id="@+id/Int"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginLeft="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:text="Intrest, Hobby, Skills \nTell us about any of your skill which you are proud of!
 Dance, Music, Graphic Designing....Anything!"
@@ -117,10 +118,10 @@ Dance, Music, Graphic Designing....Anything!"
         </TextView>
 
         <EditText
-            android:id="@+id/TextIntresrt"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="3dp"
+            android:id="@+id/textHobbies"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
             android:textColorHint="@color/btn"
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
@@ -132,16 +133,17 @@ Dance, Music, Graphic Designing....Anything!"
 
         <TextView
             android:id="@+id/CVC"
-            android:layout_width="200dp"
-            android:layout_height="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="From where did you come to know about CVC? *"
-            android:layout_marginLeft="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="start"
             android:textColor="@color/btn"
             android:typeface="sans"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp">
+            android:textStyle="bold">
 
         </TextView>
         <RadioGroup
@@ -200,24 +202,25 @@ Dance, Music, Graphic Designing....Anything!"
         </RadioGroup>
         <TextView
             android:id="@+id/AtteEvePast"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Have you attended any of the CVC events in past?"
-            android:layout_marginLeft="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="start"
             android:textColor="@color/btn"
             android:typeface="sans"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp">
+            android:textStyle="bold">
 
         </TextView>
 
         <EditText
-            android:id="@+id/TextPastEventsAttended"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="3dp"
+            android:id="@+id/textPastEvent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
             android:textColorHint="@color/btn"
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
@@ -228,24 +231,25 @@ Dance, Music, Graphic Designing....Anything!"
         </EditText>
         <TextView
             android:id="@+id/VoluPastEve"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Have you Organised or volunteered in any of the CVC events \nin past?"
-            android:layout_marginLeft="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="start"
             android:textColor="@color/btn"
             android:typeface="sans"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp">
+            android:textStyle="bold">
 
         </TextView>
 
         <EditText
-            android:id="@+id/TextVolunteerpastEvent"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="3dp"
+            android:id="@+id/textOEvent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
             android:textColorHint="@color/btn"
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
@@ -257,24 +261,25 @@ Dance, Music, Graphic Designing....Anything!"
 
         <TextView
             android:id="@+id/Share"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Would you like to shareanything else with CVC?"
-            android:layout_marginLeft="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="start"
             android:textColor="@color/btn"
             android:typeface="sans"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp">
+            android:textStyle="bold">
 
         </TextView>
 
         <EditText
-            android:id="@+id/TextShareAnything"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="3dp"
+            android:id="@+id/textShareAnything"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
             android:textColorHint="@color/btn"
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
@@ -299,7 +304,7 @@ Dance, Music, Graphic Designing....Anything!"
             android:layout_gravity="start"
             android:layout_marginRight="16dp"
             android:gravity="center"
-            android:background="@drawable/btn_bg"
+            android:background="@drawable/button_style"
            android:text="Back"
             android:textColor="@color/White"
             android:textSize="15dp" />
@@ -312,7 +317,7 @@ Dance, Music, Graphic Designing....Anything!"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:gravity="center"
-            android:background="@drawable/btn_bg"
+            android:background="@drawable/button_style"
             android:text="Next"
             android:textColor="@color/White"
             android:textSize="15dp"/>

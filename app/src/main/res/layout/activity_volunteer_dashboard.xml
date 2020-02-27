@@ -1,98 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C7E3FC"
-    tools:context=".volunteerDashboard">
+    android:background="@color/bgcolorallpages"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".VolunteerDashboard">
 
-    <Button
-        android:id="@+id/btnAllCampaing"
-        android:layout_width="122dp"
-        android:layout_height="109dp"
-        android:layout_marginBottom="18dp"
-        android:background="@drawable/campaign"
-        app:layout_constraintBottom_toTopOf="@+id/UpcomingEvents"
-        app:layout_constraintEnd_toEndOf="@+id/btnDonation"
-        app:layout_constraintStart_toStartOf="@+id/btnDonation" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp">
 
-    <Button
-        android:id="@+id/btnDonation"
-        android:layout_width="100dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginLeft="53dp"
-        android:layout_marginTop="53dp"
-        android:layout_marginBottom="46dp"
-        android:background="@drawable/donate"
-        app:layout_constraintBottom_toBottomOf="@+id/donateUs"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UpcomingEvents" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnEditProfile"
-        android:layout_width="113dp"
-        android:layout_height="124dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
-        android:background="@drawable/editprofile"
-        app:layout_constraintBottom_toBottomOf="@+id/btnAllCampaing"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnAllCampaing"
-        app:layout_constraintVertical_bias="1.0" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
-    <Button
-        android:id="@+id/button"
-        style="@style/CardView"
-        android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/background">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/house"
+                        android:layout_gravity="center">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VOLUNTEER DASHBOARD"
+                        android:textStyle="bold"
+                        android:textColor="@color/White"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="13dp"
+                        android:textAlignment="center">
+
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="215dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <!--ROW 1-->
+                        <!--Column 1-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/event"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/ImageEvent">
+                            </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageEvent"
+                                    android:text="EVENTS"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnEvent"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Column 2-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/donate"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageDonate">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageDonate"
+                                    android:text="DONATE"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnDonate"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <!--ROW 2-->
+                        <!--Column 1-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/profile"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageProfile">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageProfile"
+                                    android:text="PROFILE"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnProfile"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Column 2-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:visibility="invisible"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                              <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/remove_user"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageRemoveProfile">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageRemoveProfile"
+                                    android:text="REMOVE ACCOUNT"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnRemoveProfile"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:background="@color/btn"
-        android:text="Volunteer Dashboard"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:fab_addButtonColorNormal="@color/blue"
+        app:fab_addButtonColorPressed="@color/blue"
+        app:fab_addButtonPlusIconColor="@color/White"
+        app:fab_labelStyle="@style/customFab">
 
-    <TextView
-        android:id="@+id/UpcomingEvents"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="265dp"
-        android:text="upcoming Events"
-        android:textColor="#2E7BC7"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Fab_Action_Logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"
+            app:fab_icon="@drawable/logout"
+            app:fab_size="mini"
+            app:fab_title="Logout">
 
-    <TextView
-        android:id="@+id/donateUs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="264dp"
-        android:text="Donate Us"
-        android:textColor="#1E88E5"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnDonation" />
+        </com.getbase.floatingactionbutton.FloatingActionButton>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="My profile"
-        android:textColor="#1E88E5"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/btnEditProfile"
-        app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Fab_Action_RemoveAc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"
+            app:fab_icon="@drawable/remove_account"
+            app:fab_size="mini"
+            app:fab_title="Remove Account">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Fab_Action_ChangePass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"
+            app:fab_icon="@drawable/change_password"
+            app:fab_size="mini"
+            app:fab_title="Change Password">
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Fab_Action_EditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"
+            app:fab_icon="@drawable/edit_profile"
+            app:fab_size="mini"
+            app:fab_title="Edit Profile">
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>

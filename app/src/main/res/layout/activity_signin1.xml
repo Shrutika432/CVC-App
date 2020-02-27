@@ -5,7 +5,7 @@
     android:background="@color/bgcolorallpages"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SigninActivity1">
+    tools:context=".SignupActivity1">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -41,11 +41,105 @@
             </TextView>
 
             <TextView
-                android:id="@+id/Fn"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:id="@+id/Ea"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="E-mail *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/textEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textColorHint="#A9D2FF">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/ea"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="password *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="textPassword"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/ea2"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Confirm password *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/textConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="textPassword"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/Fn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Full Name *"
                 android:textColor="@color/btn"
@@ -56,12 +150,12 @@
             </TextView>
 
             <EditText
-                android:id="@+id/TextFullName"
+                android:id="@+id/textFullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/login_textformat"
                 android:inputType="textPersonName"
                 android:padding="6dp"
@@ -69,10 +163,11 @@
 
             <TextView
                 android:id="@+id/Ra"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Residential Address"
                 android:textColor="@color/btn"
@@ -83,12 +178,12 @@
             </TextView>
 
             <EditText
-                android:id="@+id/TextResidentialAddress"
+                android:id="@+id/textResidentialAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/login_textformat"
                 android:inputType="textMultiLine"
                 android:padding="6dp"
@@ -98,10 +193,11 @@
 
             <TextView
                 android:id="@+id/Db"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Date of Birth *"
                 android:textColor="@color/btn"
@@ -111,26 +207,29 @@
 
             </TextView>
 
-            <CalendarView
-                android:id="@+id/TextDateOfBirth"
-                android:layout_width="100dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
+            <EditText
+                android:id="@+id/textDOB"
+                android:focusable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/login_textformat"
-                android:inputType="date"
+                android:inputType="textMultiLine"
+                android:onClick="addDOB"
                 android:padding="6dp"
                 android:textColorHint="@color/btn">
 
-            </CalendarView>
+            </EditText>
 
             <TextView
                 android:id="@+id/G"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Gender"
                 android:textColor="@color/btn"
@@ -177,10 +276,11 @@
 
             <TextView
                 android:id="@+id/Cn"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Contact Number *"
                 android:textColor="@color/btn"
@@ -194,9 +294,9 @@
                 android:id="@+id/TextContactNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/login_textformat"
                 android:inputType="phone"
                 android:padding="6dp"
@@ -205,40 +305,12 @@
             </EditText>
 
             <TextView
-                android:id="@+id/Ea"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="10dp"
-                android:text="E-mail Address"
-                android:textColor="@color/btn"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:typeface="sans">
-
-            </TextView>
-
-            <EditText
-                android:id="@+id/TextEmailAddress"
+                android:id="@+id/Oc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/login_textformat"
-                android:inputType="textEmailAddress"
-                android:padding="6dp"
-                android:textColorHint="@color/btn">
-
-            </EditText>
-
-            <TextView
-                android:id="@+id/Oc"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Occupation"
                 android:textColor="@color/btn"
@@ -252,9 +324,9 @@
                 android:id="@+id/TextOccupation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/login_textformat"
                 android:inputType="textMultiLine"
                 android:padding="6dp"
@@ -265,10 +337,11 @@
 
             <TextView
                 android:id="@+id/Sci"
-                android:layout_width="300dp"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="School, College, Institution(IF ANY)"
                 android:textColor="@color/btn"
@@ -282,9 +355,9 @@
                 android:id="@+id/TextSchool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/login_textformat"
                 android:inputType="textMultiLine"
                 android:padding="6dp"
@@ -292,10 +365,11 @@
 
             <TextView
                 android:id="@+id/bG"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginLeft="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Please state your blood Group. *"
                 android:textColor="@color/btn"
@@ -309,9 +383,9 @@
                 android:id="@+id/TextBloodGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/login_textformat"
                 android:inputType="text"
                 android:padding="6dp"
@@ -321,17 +395,18 @@
 
             <Button
                 android:id="@+id/BtnNext1"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:layout_gravity="right"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/btn_bg"
+                android:background="@drawable/button_style"
                 android:gravity="center"
                 android:text="Next"
                 android:textColor="#fff"
-                android:textSize="15dp" />
+                android:textStyle="bold"
+                android:textSize="17dp" />
 
 
             <!--<Button

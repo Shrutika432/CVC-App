@@ -12,7 +12,7 @@ class LoginConformationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login_conformation)
 
         Handler().postDelayed({
-            val intent= Intent(this,volunteerDashboard::class.java)
+            val intent= Intent(this,VolunteerDashboard::class.java)
             startActivity(intent)
             finish()
         },500)

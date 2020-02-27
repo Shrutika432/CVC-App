@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolorallpages"
+    tools:context=".AdminDashboard">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/background">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/house"
+                        android:layout_gravity="center">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADMIN DASHBOARD"
+                        android:textStyle="bold"
+                        android:textColor="@color/White"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="13dp"
+                        android:textAlignment="center">
+
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="215dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <!--ROW 1-->
+                        <!--Column 1-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/create_event"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageCreateEvent">
+                                </ImageView>
+
+                                <TextView
+                                    android:id="@+id/txtCreateEvent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageCreateEvent"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="CREATE EVENT"
+                                    android:textColor="@color/heading"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnCreateEvent"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Column 2-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/donate"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageAdminDonate">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageAdminDonate"
+                                    android:text="DONATE"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnAdminDonate"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <!--ROW 2-->
+                        <!--Column 1-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/reward"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageGiveReward">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageGiveReward"
+                                    android:text="GIVE REWARD"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnGiveReward"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Column 3-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/followup"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageFollowUp">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageFollowUp"
+                                    android:text="FOLLOW UP"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnFOllowUp"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <!--ROW 2-->
+                        <!--Column 1-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/volunteer"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageVolunteer">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageVolunteer"
+                                    android:text="VOLUNTEER"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnVolunteer"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Column 3-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/donar"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageDonar">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageDonar"
+                                    android:text="DONAR"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnDonar"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <!--ROW 2-->
+                        <!--Column 1-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/area"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageArea">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageArea"
+                                    android:text="AREA"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnArea"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Column 3-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/past_events"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImagePastEvents">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImagePastEvents"
+                                    android:text="PAST EVENT"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnPastEvent"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
