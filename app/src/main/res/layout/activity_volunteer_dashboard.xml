@@ -97,10 +97,10 @@
                                     android:layout_below="@+id/ImageEvent"
                                     android:text="EVENTS"
                                     android:layout_centerInParent="true"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/heading"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="8dp"
                                     android:layout_marginBottom="10dp">
 
 
@@ -148,10 +148,10 @@
                                     android:layout_below="@+id/ImageDonate"
                                     android:text="DONATE"
                                     android:layout_centerInParent="true"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/heading"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="8dp"
                                     android:layout_marginBottom="10dp">
 
 
@@ -211,10 +211,10 @@
                                     android:layout_below="@+id/ImageProfile"
                                     android:text="PROFILE"
                                     android:layout_centerInParent="true"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/heading"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="8dp"
                                     android:layout_marginBottom="10dp">
 
 
@@ -263,10 +263,10 @@
                                     android:layout_below="@+id/ImageRemoveProfile"
                                     android:text="REMOVE ACCOUNT"
                                     android:layout_centerInParent="true"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:textStyle="bold"
                                     android:textColor="@color/heading"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="8dp"
                                     android:layout_marginBottom="10dp">
 
 

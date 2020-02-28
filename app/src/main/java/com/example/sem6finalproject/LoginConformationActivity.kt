@@ -15,7 +15,7 @@ class LoginConformationActivity : AppCompatActivity() {
             val intent= Intent(this,VolunteerDashboard::class.java)
             startActivity(intent)
             finish()
-        },500)
+        },3000)
 
 
     }

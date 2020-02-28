@@ -3,23 +3,21 @@ package com.example.sem6finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import kotlinx.android.synthetic.main.activity_signin3.*
 
-class SignupActivity3 : AppCompatActivity() {
+class SignupConformationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin3)
 
-        BtnBack2.setOnClickListener{
-            val intent= Intent(this,SignupActivity2::class.java)
+        Handler().postDelayed({
+            val intent= Intent(this,VolunteerDashboard::class.java)
             startActivity(intent)
-        }
+            finish()
+        },3000)
 
-        BtnSubmit.setOnClickListener {
-            val intent:Intent= Intent(this,VolunteerDashboard::class.java)
-            startActivity(intent)
-        }
 
 
     }

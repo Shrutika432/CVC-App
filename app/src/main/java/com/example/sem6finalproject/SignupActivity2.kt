@@ -3,9 +3,8 @@ package com.example.sem6finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.view.View
+import android.widget.*
 import com.afollestad.vvalidator.util.hide
 import com.afollestad.vvalidator.util.show
 import com.google.firebase.auth.FirebaseAuth
@@ -14,9 +13,37 @@ import kotlinx.android.synthetic.main.activity_signin2.*
 
 class SignupActivity2 : AppCompatActivity() {
 
+    lateinit var position : Spinner
+    lateinit var result : TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin2)
+
+        position = findViewById<Spinner>(R.id.SpinnerAreaOption)
+        result = findViewById<TextView>(R.id.SpinnerArearesult)
+
+        val positions = arrayOf("Waghodiya","Gorva","Manjalpur","Gotri")
+        position.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,positions)
+
+
+        position.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                result.text="Please select position"
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                pos: Int,
+                id: Long
+            ) {
+                result.text = positions.get(pos)
+            }
+
+        }
+
+
         val textOther = findViewById<EditText>(R.id.TextOther)
         textOther.hide()
 
@@ -44,21 +71,18 @@ class SignupActivity2 : AppCompatActivity() {
         var hobbies:String=findViewById<EditText>(R.id.textHobbies).text.toString()
         var pastevent:String=findViewById<EditText>(R.id.textPastEvent).text.toString()
         var oevent:String=findViewById<EditText>(R.id.textOEvent).text.toString()
-        var shareanything:String=findViewById<EditText>(R.id.textShareAnything).text.toString()
-
+       /* var shareanything:String=findViewById<EditText>(R.id.textShareAnything).text.toString()
+*/
 
         val profile2= mapOf(
             "hobbies" to hobbies,
             "pastevent" to pastevent,
-            "oevent" to oevent,
-            "shareanything" to shareanything
-
-            )
+            "oevent" to oevent)
 
 
             var uid=auth.currentUser?.uid
             firestore.collection("profile").document(uid.toString()).update(profile2).addOnSuccessListener { doc->
-                val intent=Intent(this,SignupActivity3::class.java)
+                val intent=Intent(this,SignupConformationActivity::class.java)
                 startActivity(intent)
             }
 

@@ -108,8 +108,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
-            android:text="Intrest, Hobby, Skills \nTell us about any of your skill which you are proud of!
-Dance, Music, Graphic Designing....Anything!"
+            android:text="Hobby and skills"
             android:textColor="@color/btn"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -130,6 +129,44 @@ Dance, Music, Graphic Designing....Anything!"
             android:padding="6dp">
 
         </EditText>
+
+        <TextView
+            android:id="@+id/Area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Position"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/SpinnerAreaOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:padding="17dp">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/SpinnerArearesult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+        </TextView>
 
         <TextView
             android:id="@+id/CVC"
@@ -259,35 +296,7 @@ Dance, Music, Graphic Designing....Anything!"
 
         </EditText>
 
-        <TextView
-            android:id="@+id/Share"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Would you like to shareanything else with CVC?"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="start"
-            android:textColor="@color/btn"
-            android:typeface="sans"
-            android:textSize="14sp"
-            android:textStyle="bold">
 
-        </TextView>
-
-        <EditText
-            android:id="@+id/textShareAnything"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:textColorHint="@color/btn"
-            android:inputType="textMultiLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/login_textformat"
-            android:padding="6dp">
-
-        </EditText>
 
         <LinearLayout
             android:layout_margin="20dp"

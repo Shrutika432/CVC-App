@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/bgcolorallpages"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -14,7 +17,7 @@
         android:layout_height="639dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="93dp"
+        android:layout_marginTop="11dp"
         android:layout_marginBottom="11dp"
         android:gravity="center"
         android:orientation="vertical">
@@ -22,7 +25,7 @@
         <ImageView
             android:id="@+id/ImageLoginLogo"
             android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_height="141dp"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:src="@drawable/cvc_logo" />
@@ -90,13 +93,6 @@
             android:textColor="#1E88E5"
             android:textColorLink="#1E88E5" />
 
-        <TextView
-            android:id="@+id/textDonate"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:gravity="right|top"
-            android:text="@string/want_to_donate_us"
-            android:textColor="#1E88E5" />
 
         <TextView
             android:id="@+id/tvLoginError"
@@ -133,8 +129,18 @@
             android:textSize="21dp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/textDonate"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="@string/want_to_donate_us"
+            android:textColor="#1E88E5"
+            android:layout_gravity="center" />
+
 
     </LinearLayout>
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

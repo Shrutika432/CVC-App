@@ -409,55 +409,6 @@
 
                         <!--ROW 2-->
                         <!--Column 1-->
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:layout_marginRight="5dp"
-                            android:layout_gravity="center">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <ImageView
-                                    android:layout_width="60dp"
-                                    android:layout_height="60dp"
-                                    android:src="@drawable/area"
-                                    android:layout_centerInParent="true"
-                                    android:id="@+id/ImageArea">
-                                </ImageView>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/ImageArea"
-                                    android:text="AREA"
-                                    android:layout_centerInParent="true"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:textColor="@color/heading"
-                                    android:layout_marginTop="8dp"
-                                    android:layout_marginBottom="10dp">
-
-
-                                </TextView>
-
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/BtnArea"
-                                    android:background="@android:color/transparent">
-
-
-                                </Button>
-
-
-                            </RelativeLayout>
-
-
-                        </androidx.cardview.widget.CardView>
 
                         <!--Column 3-->
                         <androidx.cardview.widget.CardView
@@ -509,6 +460,57 @@
 
 
                         </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/area"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageArea">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageArea"
+                                    android:text="AREA"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/heading"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+
+
+                                </TextView>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnArea"
+                                    android:background="@android:color/transparent">
+
+
+                                </Button>
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
 
 
 

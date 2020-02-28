@@ -27,8 +27,9 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
-             Handler().postDelayed({
+        Handler().postDelayed({
            BtnLogIn.setOnClickListener{
+
                //Toast.makeText(this,"test",Toast.LENGTH_LONG).show()
                 var email:String=findViewById<EditText>(R.id.etUsername).text.toString()
                 var password:String=findViewById<EditText>(R.id.etPassword).text.toString()
@@ -49,7 +50,11 @@ class LoginActivity : AppCompatActivity() {
 
 
             }
+
         },500)
+//        val intent=Intent(this,LoginConformationActivity::class.java)
+//        startActivity(intent)
+
 
         LinkSignUp.setOnClickListener{
             val intent=Intent(this,SignupActivity1::class.java)

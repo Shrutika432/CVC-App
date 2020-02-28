@@ -5,9 +5,42 @@
     android:background="@color/bgcolorallpages"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity3">
+    tools:context=".SignupConformationActivity">
+
+
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/ImageLoginCmf"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/login_successfully"
+            android:layout_gravity="center">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/TextLoginSucc"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="Signup Successfully"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:textColor="@color/btn"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -102,5 +135,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
+-->
 </RelativeLayout>

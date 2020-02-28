@@ -24,7 +24,7 @@ class Donationform : AppCompatActivity() {
         var firestore=FirebaseFirestore.getInstance()
 
         var Dname:String=findViewById<EditText>(R.id.textDname).text.toString()
-        var Dcontact:String=findViewById<EditText>(R.id.textDcontect).text.toString()
+        var Dcontact:String=findViewById<EditText>(R.id.textDcontact).text.toString()
         var Demail:String=findViewById<EditText>(R.id.textDemail).text.toString()
         var Dpurpose:String=findViewById<EditText>(R.id.textDpurpose).text.toString()
         var Daddress:String=findViewById<EditText>(R.id.textDaddress).text.toString()

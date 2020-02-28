@@ -45,11 +45,13 @@
             android:id="@+id/tvDonationForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1E88E5"
+            android:background="#162992"
             android:gravity="center"
             android:text="Donation Form"
-            android:textColor="#050000"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textColor="#ffffff"/>
+<!--            android:textColor="#050000"-->
+
 
         <TextView
             android:id="@+id/tvDname"
@@ -81,7 +83,7 @@
 
         </EditText>
         <TextView
-            android:id="@+id/tvDcontect"
+            android:id="@+id/tvDcontact"
             style="@style/Widget.AppCompat.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,7 +91,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
-            android:text="Contect*"
+            android:text="Contact*"
             android:textColor="@color/btn"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -97,7 +99,7 @@
 
         </TextView>
         <EditText
-            android:id="@+id/textDcontect"
+            android:id="@+id/textDcontact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
