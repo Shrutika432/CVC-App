@@ -186,7 +186,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_gravity="center">
 
                             <RelativeLayout
@@ -196,16 +196,16 @@
                                 <ImageView
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
-                                    android:src="@drawable/reward"
+                                    android:src="@drawable/donar"
                                     android:layout_centerInParent="true"
-                                    android:id="@+id/ImageGiveReward">
+                                    android:id="@+id/ImageDonar">
                                 </ImageView>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/ImageGiveReward"
-                                    android:text="GIVE REWARD"
+                                    android:layout_below="@+id/ImageDonar"
+                                    android:text="MANAGE DONAR"
                                     android:layout_centerInParent="true"
                                     android:textSize="14sp"
                                     android:textStyle="bold"
@@ -219,7 +219,7 @@
                                 <Button
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/BtnGiveReward"
+                                    android:id="@+id/BtnDonar"
                                     android:background="@android:color/transparent">
 
 
@@ -247,16 +247,16 @@
                                 <ImageView
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
-                                    android:src="@drawable/followup"
+                                    android:src="@drawable/past_events"
                                     android:layout_centerInParent="true"
-                                    android:id="@+id/ImageFollowUp">
+                                    android:id="@+id/ImagePastEvents">
                                 </ImageView>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/ImageFollowUp"
-                                    android:text="FOLLOW UP"
+                                    android:layout_below="@+id/ImagePastEvents"
+                                    android:text="GENERATE REPORTS"
                                     android:layout_centerInParent="true"
                                     android:textSize="14sp"
                                     android:textStyle="bold"
@@ -270,7 +270,7 @@
                                 <Button
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/BtnFOllowUp"
+                                    android:id="@+id/BtnGenerateReports"
                                     android:background="@android:color/transparent">
 
 
@@ -319,7 +319,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/ImageVolunteer"
-                                    android:text="VOLUNTEER"
+                                    android:text="MANAGE VOLUNTEER"
                                     android:layout_centerInParent="true"
                                     android:textSize="14sp"
                                     android:textStyle="bold"
@@ -351,7 +351,8 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:layout_marginLeft="5dp"
+                android:visibility="invisible"
+                            android:layout_marginRight="5dp"
                             android:layout_gravity="center">
 
                             <RelativeLayout
@@ -361,16 +362,16 @@
                                 <ImageView
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
-                                    android:src="@drawable/donar"
+                                    android:src="@drawable/reward"
                                     android:layout_centerInParent="true"
-                                    android:id="@+id/ImageDonar">
+                                    android:id="@+id/ImageGiveReward">
                                 </ImageView>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/ImageDonar"
-                                    android:text="DONAR"
+                                    android:layout_below="@+id/ImageGiveReward"
+                                    android:text="GIVE REWARD"
                                     android:layout_centerInParent="true"
                                     android:textSize="14sp"
                                     android:textStyle="bold"
@@ -384,7 +385,7 @@
                                 <Button
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/BtnDonar"
+                                    android:id="@+id/BtnGiveReward"
                                     android:background="@android:color/transparent">
 
 
@@ -416,6 +417,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
+                            android:visibility="invisible"
                             android:layout_marginLeft="5dp"
                             android:layout_gravity="center">
 
@@ -426,16 +428,16 @@
                                 <ImageView
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
-                                    android:src="@drawable/past_events"
+                                    android:src="@drawable/followup"
                                     android:layout_centerInParent="true"
-                                    android:id="@+id/ImagePastEvents">
+                                    android:id="@+id/ImageFollowUp">
                                 </ImageView>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/ImagePastEvents"
-                                    android:text="PAST EVENT"
+                                    android:layout_below="@+id/ImageFollowUp"
+                                    android:text="FOLLOW UP"
                                     android:layout_centerInParent="true"
                                     android:textSize="14sp"
                                     android:textStyle="bold"
@@ -449,7 +451,7 @@
                                 <Button
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/BtnPastEvent"
+                                    android:id="@+id/BtnFOllowUp"
                                     android:background="@android:color/transparent">
 
 
@@ -525,4 +527,55 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:fab_addButtonColorNormal="@color/blue"
+        app:fab_addButtonColorPressed="@color/blue"
+        app:fab_addButtonPlusIconColor="@color/White"
+        app:fab_labelStyle="@style/customFab">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Fab_Action_Logout_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"
+            app:fab_icon="@drawable/logout"
+            app:fab_size="mini"
+            app:fab_title="Logout">
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Fab_Action_ChangePass_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"
+            app:fab_icon="@drawable/change_password"
+            app:fab_size="mini"
+            app:fab_title="Change Password">
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Fab_Action_EditProfile_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"
+            app:fab_icon="@drawable/edit_profile"
+            app:fab_size="mini"
+            app:fab_title="Edit Profile">
+
+        </com.getbase.floatingactionbutton.FloatingActionButton>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </RelativeLayout>

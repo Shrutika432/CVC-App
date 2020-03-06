@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolorallpages"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".VolunteerDashboard">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/background">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="203dp"
+                        android:layout_height="114dp"
+                        app:srcCompat="@drawable/profile_pic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="JISHA PATEL"
+                        android:textStyle="bold"
+                        android:textColor="@color/White"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="13dp"
+                        android:textAlignment="center">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VOLUNTEER"
+                        android:textColor="@color/White"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="9dp"
+                        android:textAlignment="center">
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9825303908"
+                        android:textColor="@color/heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginLeft="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jisha1810@gmail.com"
+                        android:textColor="@color/heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="20dp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahmedabad"
+                        android:textColor="@color/heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="20dp">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+
+
+                        <!--ROW 1-->
+                        <!--Column 1-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            app:cardElevation="5dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@color/blue"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/event"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageEvent">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageEvent"
+                                    android:text="EVENTS"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/White"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+                                </TextView>
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnEvent"
+                                    android:background="@android:color/transparent">
+                                </Button>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!--Column 2-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:cardElevation="5dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_marginLeft="5dp"
+                            app:cardBackgroundColor="@color/blue"
+                            android:layout_gravity="center">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/donate"
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/ImageDonate">
+                                </ImageView>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageDonate"
+                                    android:text="DONATE"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/White"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp">
+                                </TextView>
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/BtnDonate"
+                                    android:background="@android:color/transparent">
+                                </Button>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

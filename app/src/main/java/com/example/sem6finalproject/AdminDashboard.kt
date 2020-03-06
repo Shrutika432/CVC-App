@@ -20,6 +20,10 @@ class AdminDashboard : AppCompatActivity() {
             var intent:Intent= Intent(this,Donationform::class.java)
             startActivity(intent)
         }
+        BtnGenerateReports.setOnClickListener {
+            var intent=Intent(this,reports_dashboard::class.java)
+            startActivity(intent)
+        }
 
     }
 }

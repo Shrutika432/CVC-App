@@ -16,26 +16,23 @@ class VolunteerDashboard : AppCompatActivity() {
         setContentView(R.layout.activity_volunteer_dashboard)
 
         BtnDonate.setOnClickListener {
-            startActivity(Intent(this,Donationform::class.java))
+            startActivity(Intent(this, Donationform::class.java))
         }
         Fab_Action_RemoveAc.setOnClickListener {
-            var intent:Intent= Intent(this,removeAccount::class.java)
+            var intent: Intent = Intent(this, removeAccount::class.java)
             startActivity(intent)
             finish()
         }
-    }
+        BtnProfile.setOnClickListener {
+            var intent = Intent(this, profile::class.java)
+            startActivity(intent)
+        }
+        Fab_Action_ChangePass.setOnClickListener {
+            var intent: Intent = Intent(this, Change_Password::class.java)
+            startActivity(intent)
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-       menuInflater.inflate(R.menu.logout,menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId==R.id.logoutitem){
-            Toast.makeText(this,"logout successfully",Toast.LENGTH_LONG).show()
         }
 
-        return super.onOptionsItemSelected(item)
-    }
 
+    }
 }
