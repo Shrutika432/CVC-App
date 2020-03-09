@@ -10,38 +10,32 @@ import kotlinx.android.synthetic.main.activity_donor_report.*
 import kotlinx.android.synthetic.main.activity_reports_dashboard.*
 import java.io.Serializable
 
-class volunteerReport: AppCompatActivity() {
+class eventDetails : AppCompatActivity() {
     //var id="54kqrLhEYlQh4ck2b7Ou"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_volunteer_report)
-        var volunteer:Volunteer? = intent.getSerializableExtra("volunteer") as? Volunteer
-        readvolunteer(volunteer)
+        setContentView(R.layout.activity_event_details)
+        var event:Event? = intent.getSerializableExtra("event") as? Event
+        readEvent(event)
 
     }
 
-    fun readvolunteer(volunteer:Volunteer?)
+    fun readEvent(event:Event?)
     {
         var firestore=FirebaseFirestore.getInstance()
-        var fullname=findViewById<TextView>(R.id.tvVname)
-        var cnum=findViewById<TextView>(R.id.textVolcontact)
-        var email=findViewById<TextView>(R.id.textVolemail)
-        var position=findViewById<TextView>(R.id.textVolposition)
-        var address=findViewById<TextView>(R.id.textVoladdress)
-        var dob=findViewById<TextView>(R.id.textVolDOB)
-        var gender=findViewById<TextView>(R.id.textVolgender)
-        var bgroup=findViewById<TextView>(R.id.textVOlBloodgroup)
+        var eventdec=findViewById<TextView>(R.id.eventdec)
+        var eventdate=findViewById<TextView>(R.id.eventdate)
+        var area=findViewById<TextView>(R.id.eventarea)
+        var nov=findViewById<TextView>(R.id.eventnov)
+        var points=findViewById<TextView>(R.id.eventpoints)
 
 
+        eventdec.setText(event?.eventdec.toString())
+        eventdate.setText(event?.eventdate.toString())
+        area.setText(event?.area.toString())
+        nov.setText(event?.nov.toString())
+        points.setText(event?.points.toString())
 
-        fullname.setText(volunteer?.fullname.toString())
-        cnum.setText(volunteer?.cnum.toString())
-        email.setText(volunteer?.email.toString())
-        position.setText(volunteer?.position.toString())
-        address.setText(volunteer?.address.toString())
-        dob.setText(volunteer?.dob.toString())
-        gender.setText(volunteer?.gender.toString())
-        bgroup.setText(volunteer?.bgroup.toString())
 
 //        firestore.collection("donordetails").document(id.toString()).get()
 //            .addOnSuccessListener {document ->

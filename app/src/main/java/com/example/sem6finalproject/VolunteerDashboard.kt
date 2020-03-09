@@ -52,6 +52,10 @@ class VolunteerDashboard : AppCompatActivity() {
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        BtnEvent.setOnClickListener {
+            var intent=Intent(this,eventList::class.java)
+            startActivity(intent)
+        }
 
 
     }

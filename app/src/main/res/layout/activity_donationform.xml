@@ -77,7 +77,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_textformat"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:padding="6dp"
             android:textColorHint="@color/btn">
 
@@ -222,7 +222,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/login_textformat"
-            android:inputType="text"
+            android:inputType="number"
             android:padding="6dp"
             android:textColorHint="@color/btn">
 

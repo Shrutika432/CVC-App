@@ -109,7 +109,7 @@
                                 <Button
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/BtnEvent"
+                                    android:id="@+id/BtnEventReport"
                                     android:background="@android:color/transparent">
 
 

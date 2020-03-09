@@ -19,5 +19,9 @@ class reports_dashboard : AppCompatActivity() {
             var intent=Intent(this,volunteerList::class.java)
             startActivity(intent)
         }
+        BtnEventReport.setOnClickListener {
+            var intent=Intent(this,eventList::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -35,6 +35,14 @@ class AdminDashboard : AppCompatActivity() {
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        BtnDonar.setOnClickListener {
+            var intent=Intent(this,DonorList::class.java)
+            startActivity(intent)
+        }
+        BtnVolunteer.setOnClickListener {
+            var intent=Intent(this,volunteerList::class.java)
+            startActivity(intent)
+        }
 
     }
 }

@@ -565,17 +565,5 @@
 
         </com.getbase.floatingactionbutton.FloatingActionButton>
 
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/Fab_Action_EditProfile_admin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/blue"
-            app:fab_colorPressed="@color/blue"
-            app:fab_icon="@drawable/edit_profile"
-            app:fab_size="mini"
-            app:fab_title="Edit Profile">
-
-        </com.getbase.floatingactionbutton.FloatingActionButton>
-
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </RelativeLayout>

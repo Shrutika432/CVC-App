@@ -24,7 +24,7 @@ class SignupActivity2 : AppCompatActivity() {
         position = findViewById<Spinner>(R.id.SpinnerAreaOption)
         result = findViewById<TextView>(R.id.SpinnerArearesult)
 
-        val positions = arrayOf("Waghodiya","Gorva","Manjalpur","Gotri")
+        val positions = arrayOf("Volunteer","Camp head","Sub Camp Head","Recourse Manager")
         position.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,positions)
 
 

@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/cvclogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".volunteerReport"></activity>
+        <activity android:name=".eventDetails"></activity>
+        <activity android:name=".eventList" />
+        <activity android:name=".volunteerReport" />
         <activity android:name=".volunteerList" />
         <activity android:name=".DonorList" />
         <activity android:name=".donorReport" />
@@ -49,7 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
 
         <service
             android:name=".MyFirebaseMessagingService"

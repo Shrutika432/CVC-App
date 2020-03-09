@@ -19,7 +19,7 @@ class DonorList : AppCompatActivity() {
         FirebaseFirestore.getInstance().collection("donordetails").get()
             .addOnSuccessListener { querySnapShot ->
 
-                var donorListView: ListView = findViewById(R.id.donorListView)
+                var donorListView: ListView = this.findViewById(R.id.donorListView)
 
                 var donors: Array<Donor?> =
                     querySnapShot.documents.map { donor -> donor.toObject(Donor::class.java) }
