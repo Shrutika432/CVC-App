@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".volunteerReport">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/textvoldata"
+            android:layout_width="match_parent"
+            android:layout_height="720dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="11dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvVname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#162992"
+                android:gravity="center"
+                android:text="Your Name"
+                android:textSize="30sp"
+                android:textColor="#ffffff"/>
+            <!--            android:textColor="#050000"-->
+
+
+            <TextView
+                android:id="@+id/tvDcontact"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Contact*"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+            </TextView>
+            <TextView
+                android:id="@+id/textVolcontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvDemail"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Email *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <TextView
+                android:id="@+id/textVolemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvPosition"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Position"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <TextView
+                android:id="@+id/textVolposition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvaddress"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Address"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <TextView
+                android:id="@+id/textVoladdress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvDOB"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Date of Birth"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <TextView
+                android:id="@+id/textVolDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="date"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tvGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Gender"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <TextView
+                android:id="@+id/textVolgender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+            </TextView>
+            <TextView
+                android:id="@+id/tvbloodgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Blood Group"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+            </TextView>
+            <TextView
+                android:id="@+id/textVOlBloodgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+            </TextView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -37,27 +37,26 @@
                         app:srcCompat="@drawable/profile_pic" />
 
                     <TextView
+                        android:id="@+id/tvname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="JISHA PATEL"
-                        android:textStyle="bold"
-                        android:textColor="@color/White"
-                        android:textSize="20sp"
                         android:layout_gravity="center"
                         android:layout_marginTop="13dp"
-                        android:textAlignment="center">
-                    </TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="VOLUNTEER"
+                        android:textAlignment="center"
                         android:textColor="@color/White"
                         android:textSize="20sp"
-                        android:textStyle="bold"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvposition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="9dp"
-                        android:textAlignment="center">
-                    </TextView>
+                        android:textAlignment="center"
+                        android:textColor="@color/White"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -68,41 +67,38 @@
                     android:layout_marginRight="10dp">
 
                     <TextView
+                        android:id="@+id/tvcontact"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9825303908"
-                        android:textColor="@color/heading"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
                         android:layout_gravity="left"
-                        android:layout_marginTop="9dp"
-                        android:layout_marginLeft="20dp">
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Jisha1810@gmail.com"
-                        android:textColor="@color/heading"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginLeft="20dp">
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ahmedabad"
-                        android:textColor="@color/heading"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="3dp"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginBottom="20dp">
-                    </TextView>
+                        android:layout_marginTop="9dp"
+                        android:textColor="@color/heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold"></TextView>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="135dp"

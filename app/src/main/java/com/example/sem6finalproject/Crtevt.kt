@@ -1,10 +1,13 @@
 package com.example.sem6finalproject
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_create_event.*
 import java.util.*
 
 class Crtevt : AppCompatActivity() {
@@ -13,6 +16,7 @@ class Crtevt : AppCompatActivity() {
     lateinit var result : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_event)
 
@@ -38,6 +42,9 @@ class Crtevt : AppCompatActivity() {
                             }
 
         }
+        BtnPost.setOnClickListener {
+            createvent()
+        }
 
     }
     fun addDate(view:View)
@@ -55,5 +62,29 @@ class Crtevt : AppCompatActivity() {
             },year,month,day)
         dpd.show()
 
+    }
+    fun createvent()
+    {
+        var firestore=FirebaseFirestore.getInstance()
+        var eventdate:String=findViewById<EditText>(R.id.textEventDate).text.toString()
+        var eventdec:String=findViewById<EditText>(R.id.textDOB).text.toString()
+        var nov:String=findViewById<EditText>(R.id.TextNov).text.toString()
+        var area:String=findViewById<TextView>(R.id.SpinnerArearesult).text.toString()
+        var points:String=findViewById<EditText>(R.id.TextPoint).text.toString()
+
+        val createEvent= hashMapOf(
+            "eventdate" to eventdate,
+            "eventdec" to eventdec,
+            "nov" to nov,
+            "area" to area,
+            "points" to points
+        )
+        firestore.collection("createEvent").document().set(createEvent).addOnSuccessListener { doc->
+
+            Toast.makeText(this,"event posted succesfully",Toast.LENGTH_LONG).show()
+        }
+            .addOnFailureListener {
+                Toast.makeText(this,"event failed to post",Toast.LENGTH_LONG).show()
+            }
     }
 }

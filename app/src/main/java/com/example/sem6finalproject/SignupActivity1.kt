@@ -24,7 +24,6 @@ class SignupActivity1 : AppCompatActivity() {
 
         BtnNext1.setOnClickListener{
             submitForm1()
-            Toast.makeText(this,"signup success",Toast.LENGTH_LONG).show()
 
         }
     }
@@ -113,8 +112,13 @@ class SignupActivity1 : AppCompatActivity() {
                     val intent=Intent(this,SignupActivity2::class.java)
                     startActivity(intent)
                 }
+            Toast.makeText(this,"signup success",Toast.LENGTH_LONG).show()
 
-        }
+
+        }.addOnFailureListener{
+                Toast.makeText(this,"failed",Toast.LENGTH_LONG).show()
+
+            }
 
 
     }

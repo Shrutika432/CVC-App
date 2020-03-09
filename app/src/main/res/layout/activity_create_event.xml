@@ -148,6 +148,7 @@
             android:textColor="@color/btn"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:visibility="invisible"
             android:typeface="sans">
 
         </TextView>

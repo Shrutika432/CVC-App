@@ -3,6 +3,7 @@ package com.example.sem6finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 import com.afollestad.vvalidator.util.hide
@@ -49,13 +50,11 @@ class SignupActivity2 : AppCompatActivity() {
 
         BtnNext2.setOnClickListener{
             submitForm2()
-//            val intent=Intent(this,SignupActivity3::class.java)
-//            startActivity(intent)
         }
 
         BtnBack1.setOnClickListener{
-//            val intent=Intent(this,SignupActivity1::class.java)
-//            startActivity(intent)
+            val intent=Intent(this,SignupActivity1::class.java)
+            startActivity(intent)
         }
 
         val otherRadio = findViewById<RadioButton>(R.id.Radio7)
@@ -69,22 +68,27 @@ class SignupActivity2 : AppCompatActivity() {
         var firestore= FirebaseFirestore.getInstance()
 
         var hobbies:String=findViewById<EditText>(R.id.textHobbies).text.toString()
+        var position:String=findViewById<TextView>(R.id.SpinnerArearesult).text.toString()
         var pastevent:String=findViewById<EditText>(R.id.textPastEvent).text.toString()
         var oevent:String=findViewById<EditText>(R.id.textOEvent).text.toString()
-       /* var shareanything:String=findViewById<EditText>(R.id.textShareAnything).text.toString()
-*/
 
         val profile2= mapOf(
             "hobbies" to hobbies,
+            "position" to position,
             "pastevent" to pastevent,
             "oevent" to oevent)
 
-
+        Log.d("SUBMIT FORM", "Clicked")
             var uid=auth.currentUser?.uid
             firestore.collection("profile").document(uid.toString()).update(profile2).addOnSuccessListener { doc->
                 val intent=Intent(this,SignupConformationActivity::class.java)
                 startActivity(intent)
             }
+                .addOnFailureListener {
+
+                    Toast.makeText(this,"failed",Toast.LENGTH_LONG).show()
+
+                }
 
 
 

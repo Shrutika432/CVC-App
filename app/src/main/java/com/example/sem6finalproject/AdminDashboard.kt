@@ -3,7 +3,10 @@ package com.example.sem6finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_admin_dashboard.*
+import kotlinx.android.synthetic.main.activity_volunteer_dashboard.*
 
 class AdminDashboard : AppCompatActivity() {
 
@@ -22,6 +25,14 @@ class AdminDashboard : AppCompatActivity() {
         }
         BtnGenerateReports.setOnClickListener {
             var intent=Intent(this,reports_dashboard::class.java)
+            startActivity(intent)
+        }
+        Fab_Action_Logout_admin.setOnClickListener {
+            Toast.makeText(this,"you SignOut", Toast.LENGTH_LONG).show()
+
+//            var auth=FirebaseAuth.getInstance()
+            FirebaseAuth.getInstance().signOut()
+            var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
