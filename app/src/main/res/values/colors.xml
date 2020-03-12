@@ -6,7 +6,8 @@
 
     <color name="White">#FFFFFF</color>
     <color name="Transparent">#00000000</color>
-    <color name="gradStart">#1E88E5</color>
+    <color name="gradStart">#07354F</color>
+<!--    1E88E5-->
     <color name="gradStop">#74B7F6</color>
     <color name="bgcolorallpages">#F6F7F9</color>
     <color name="btn">#000000</color>

@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
@@ -22,6 +25,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val fade= AnimationUtils.loadAnimation(this,R.anim.fade)
+        val cvc=AnimationUtils.loadAnimation(this,R.anim.cvc)
+
+        val ImageLoginLogo=findViewById(R.id.ImageLoginLogo) as ImageView
+        val thought1=findViewById(R.id.thought1) as TextView
+
+        ImageLoginLogo.startAnimation(fade)
+        thought1.startAnimation(cvc)
+
         val user:String? = FirebaseAuth.getInstance().currentUser?.uid;
         Log.d("USER", user.toString())
 
@@ -66,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                 // Log and toast
                 val msg = "Tokan"
                 Log.d(TAG, msg)
-                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
             })
         FirebaseMessaging.getInstance().isAutoInitEnabled = true
     }

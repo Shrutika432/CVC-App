@@ -12,10 +12,10 @@
         <activity android:name=".eventDetails"></activity>
         <activity android:name=".eventList" />
         <activity android:name=".volunteerReport" />
+        <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".volunteerList" />
         <activity android:name=".DonorList" />
         <activity android:name=".donorReport" />
-        <activity android:name=".Change_Password" />
         <activity android:name=".profile" />
         <activity android:name=".reports_dashboard" />
         <activity android:name=".removeAccount" />
