@@ -24,9 +24,9 @@ class VolunteerDashboard : AppCompatActivity() {
             startActivity(Intent(this, Donationform::class.java))
         }
         Fab_Action_RemoveAc.setOnClickListener {
-            var intent: Intent = Intent(this, removeAccount::class.java)
-            startActivity(intent)
-            finish()
+            //            var intent: Intent = Intent(this, removeAccount::class.java)
+//            startActivity(intent)
+//            finish()
         }
         BtnProfile.setOnClickListener {
             var intent = Intent(this, profile::class.java)
