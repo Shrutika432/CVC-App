@@ -67,8 +67,6 @@ class VolunteerDashboard : AppCompatActivity() {
         Fab_Action_RemoveAc.setOnClickListener {
             Toast.makeText(this,"you SignOut",Toast.LENGTH_LONG).show()
 
-//            var auth=FirebaseAuth.getInstance()
-
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

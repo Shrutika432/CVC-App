@@ -60,7 +60,9 @@ class SignupActivity1 : AppCompatActivity() {
         var school:String=findViewById<EditText>(R.id.TextSchool).text.toString()
         var bgroup:String=findViewById<EditText>(R.id.TextBloodGroup).text.toString()
         var genderGroup = findViewById<RadioGroup>(R.id.GroupRadio)
-        var gender:String = findViewById<RadioButton>(genderGroup.checkedRadioButtonId).text.toString()
+        var gender: String =
+            findViewById<RadioButton>(genderGroup.checkedRadioButtonId).text.toString()
+        
 
         val formValidation = form {
             input(R.id.textEmail){
