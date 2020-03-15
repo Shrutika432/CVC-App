@@ -82,6 +82,12 @@
             android:inputType="text"
             android:padding="6dp"
             android:textColorHint="@color/btn"/>
+
+        <Button
+            android:id="@+id/eventDetailsYesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </LinearLayout>
 
     </ScrollView>
