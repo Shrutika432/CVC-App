@@ -4,18 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgcolorallpages"
     android:orientation="vertical"
     tools:context="volunteerList">
+<!--    android:orientation="vertical"-->
+
+
+
+        <ImageView
+            android:id="@+id/Imagelist"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/list"></ImageView>
+
 
     <TextView
-        android:id="@+id/tvDonationForm2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#162992"
-        android:gravity="center"
-        android:text="All Volunteer"
-        android:textColor="#ffffff"
-        android:textSize="30sp" />
+            android:id="@+id/TextVolunteerList"
+            android:layout_width="400dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Volunteer List"
+            android:textAlignment="center"
+            android:textColor="@color/heading"
+            android:textSize="25dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvDonationForm2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#162992"-->
+<!--        android:gravity="center"-->
+<!--        android:text="All Volunteer"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="30sp" />-->
+
 
     <ListView
         android:id="@+id/volunteerListView"
@@ -23,5 +52,6 @@
         android:layout_height="match_parent">
 
     </ListView>
+
 
 </LinearLayout>

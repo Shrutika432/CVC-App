@@ -83,11 +83,12 @@
             android:padding="6dp"
             android:textColorHint="@color/btn"/>
 
-        <Button
-            android:id="@+id/eventDetailsYesBtn"
+        <TextView
+            android:id="@+id/joinevent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/Join_event"
+            android:textColor="#1E88E5" />
     </LinearLayout>
 
     </ScrollView>

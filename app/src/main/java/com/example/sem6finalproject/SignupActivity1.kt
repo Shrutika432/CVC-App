@@ -105,7 +105,8 @@ class SignupActivity1 : AppCompatActivity() {
         "occ" to occ,
         "school" to school,
         "bgroup" to bgroup,
-        "gender" to gender
+        "gender" to gender,
+        "Points" to 50
         )
 
         auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener { doc->

@@ -1,5 +1,6 @@
 package com.example.sem6finalproject
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,9 +25,28 @@ class VolunteerDashboard : AppCompatActivity() {
             startActivity(Intent(this, Donationform::class.java))
         }
         Fab_Action_RemoveAc.setOnClickListener {
-            //            var intent: Intent = Intent(this, removeAccount::class.java)
-//            startActivity(intent)
-//            finish()
+            // build alert dialog
+            val dialogBuilder = AlertDialog.Builder(this)
+
+            // set message of alert dialog
+            dialogBuilder.setMessage("Do you want to close this application ?")
+                // if the dialog is cancelable
+                .setCancelable(false)
+                // positive button text and action
+                .setPositiveButton("Proceed", DialogInterface.OnClickListener {
+                        dialog, id -> finish()
+                })
+                // negative button text and action
+                .setNegativeButton("Cancel", DialogInterface.OnClickListener {
+                        dialog, id -> dialog.cancel()
+                })
+
+            // create dialog box
+            val alert = dialogBuilder.create()
+            // set title for alert dialog box
+            alert.setTitle("AlertDialogExample")
+            // show alert dialog
+            alert.show()
         }
         BtnProfile.setOnClickListener {
             var intent = Intent(this, profile::class.java)

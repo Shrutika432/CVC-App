@@ -3,8 +3,11 @@ package com.example.sem6finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.TextView
 import android.widget.Toast
+
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.DocumentReference
@@ -13,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_donor_report.*
 import kotlinx.android.synthetic.main.activity_event_details.*
 import kotlinx.android.synthetic.main.activity_reports_dashboard.*
+import kotlinx.android.synthetic.main.change_password.view.*
 import java.io.Serializable
 
 class eventDetails : AppCompatActivity() {
@@ -38,6 +42,26 @@ class eventDetails : AppCompatActivity() {
         }
 
 
+        joinevent.setOnClickListener {
+            val mDialogView = LayoutInflater.from(this).inflate(R.layout.joinconfirmation, null)
+            //AlertDialogBuilder
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+                .setTitle("Confirmation")
+            //show dialog
+            val  mAlertDialog = mBuilder.show()
+            //login button click of custom layout
+            mDialogView.dialogDoneBtn.setOnClickListener {
+                //dismiss dialog
+                mAlertDialog.dismiss()
+
+            }
+            //cancel button click of custom layout
+            mDialogView.dialogCancelBtn.setOnClickListener {
+                //dismiss dialog
+                mAlertDialog.dismiss()
+            }
+        }
     }
 
     fun readEvent(event: Event?) {

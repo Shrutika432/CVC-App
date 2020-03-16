@@ -238,7 +238,6 @@
                         <!--Column 2-->
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
-                            android:visibility="invisible"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
@@ -261,7 +260,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/ImageRemoveProfile"
-                                    android:text="REMOVE ACCOUNT"
+                                    android:text="INTRESTED VOLUNTEER DETAILS"
                                     android:layout_centerInParent="true"
                                     android:textSize="14sp"
                                     android:textStyle="bold"

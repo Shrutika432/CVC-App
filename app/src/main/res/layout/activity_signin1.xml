@@ -18,12 +18,12 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/ImageSignUpForm"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/signup_form"></ImageView>
+            android:id="@+id/ImageSignUpForm"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/signup_form"></ImageView>
 
 
             <TextView
