@@ -3,4 +3,6 @@
     <string name="title_activity_admin_dash_board">adminDashBoard</string>
     <string name="forgot_Password"><u>Forgot Password</u></string>
     <string name="want_to_donate_us"><u>want to donate us?</u></string>
+    <string name="Join_event"><u>Click here to join this Campaign</u></string>
+
 </resources>

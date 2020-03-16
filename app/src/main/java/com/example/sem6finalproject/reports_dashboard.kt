@@ -23,5 +23,9 @@ class reports_dashboard : AppCompatActivity() {
             var intent=Intent(this,eventList::class.java)
             startActivity(intent)
         }
+        BtnRemoveProfile.setOnClickListener {
+            var intent=Intent(this,eventList::class.java)
+            startActivity(intent)
+        }
     }
 }

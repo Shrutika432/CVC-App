@@ -26,6 +26,7 @@ class profile : AppCompatActivity() {
         var pcontact=findViewById<TextView>(R.id.tvcontact)
         var pemail=findViewById<TextView>(R.id.tvemail)
         var paddress=findViewById<TextView>(R.id.tvaddress)
+        var points=findViewById<TextView>(R.id.score)
 
 
         var uid=auth.currentUser?.uid
@@ -38,6 +39,7 @@ class profile : AppCompatActivity() {
                     pcontact.setText(document.data?.get("cnum").toString())
                     pemail.setText(document.data?.get("email").toString())
                     paddress.setText(document.data?.get("address").toString())
+                    points.setText(document.data?.get("Points").toString())
 
 
                     Toast.makeText(this,uid.toString(),Toast.LENGTH_LONG).show()

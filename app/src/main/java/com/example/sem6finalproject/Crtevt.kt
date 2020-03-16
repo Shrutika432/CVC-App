@@ -20,7 +20,7 @@ class Crtevt : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_event)
 
-        option = findViewById<Spinner>(R.id.SpinnerAreaOption)
+        option = findViewById(R.id.SpinnerAreaOption)
         result = findViewById<TextView>(R.id.SpinnerArearesult)
 
         val options = arrayOf("Waghodiya","Gorva","Manjalpur","Gotri")
