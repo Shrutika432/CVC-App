@@ -27,8 +27,8 @@ class volunteerList : AppCompatActivity() {
 
                 var volunteerNames: Array<String?> = volunteers.map { volunteer -> volunteer?.fullname }.toTypedArray()
 
-                var volunteerListAdapter: ArrayAdapter<String> =
-                    ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, volunteerNames)
+                var volunteerListAdapter: ArrayAdapter<String?> =
+                    ArrayAdapter<String?>(this, android.R.layout.simple_list_item_1, volunteerNames)
 
                 volunteerList.setOnItemClickListener { parent, view, index, id ->
                     var intent = Intent(this,volunteerReport::class.java)
@@ -46,15 +46,16 @@ class volunteerList : AppCompatActivity() {
     }
 }
 
-class Volunteer : Serializable {
-    var fullname = ""
-    var cnum = ""
-    var email = ""
-    var position = ""
-    var address = ""
-    var dob = ""
-    var gender = ""
-    var bgroup = ""
+    class Volunteer : Serializable {
+        var fullname = ""
+        var cnum = ""
+        var email = ""
+        var position = ""
+        var address = ""
+        var dob = ""
+        var gender = ""
+        var bgroup = ""
+        var points = 0
 
     constructor()
     constructor(
@@ -64,9 +65,9 @@ class Volunteer : Serializable {
         address: String,
         dob: String,
         gender: String,
-        bgroup: String
+        bgroup: String,
+        points: Int
     ) {
-
         this.fullname = fullname
         this.cnum = cnum
         this.position = position
@@ -74,6 +75,7 @@ class Volunteer : Serializable {
         this.dob = dob
         this.gender = gender
         this.bgroup = bgroup
+        this.points = points
     }
 
     override fun toString(): String {

@@ -22,12 +22,16 @@ class eventList : AppCompatActivity() {
                 var eventListView: ListView = this.findViewById(R.id.eventListView)
 
                 var events: Array<Event?> =
-                    querySnapShot.documents.map { event -> event.toObject(Event::class.java) }
+                    querySnapShot.documents.map { event ->
+                            var e: Event? = event.toObject(Event::class.java)
+                            e?.id = event.id
+                            return@map e
+                        }
                         .toTypedArray()
                 var eventNames: Array<String?> = events.map { event -> event?.eventdec }.toTypedArray()
 
-                var eventListAdapter: ArrayAdapter<String> =
-                    ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, eventNames)
+                var eventListAdapter: ArrayAdapter<String?> =
+                    ArrayAdapter<String?>(this, android.R.layout.simple_list_item_1, eventNames)
 
                 eventListView.setOnItemClickListener { parent, view, index, id ->
                     var intent = Intent(this,eventDetails::class.java)
@@ -46,6 +50,7 @@ class eventList : AppCompatActivity() {
 }
 
 class Event : Serializable {
+    var id = ""
     var eventdate = ""
     var area = ""
     var eventdec = ""
@@ -55,6 +60,7 @@ class Event : Serializable {
 
     constructor()
     constructor(
+        id:String,
         eventdate: String,
         area: String,
         eventdec: String,
@@ -63,6 +69,7 @@ class Event : Serializable {
 
     ) {
 
+        this.id = id
         this.eventdate = eventdate
         this.area = area
         this.eventdec = eventdec

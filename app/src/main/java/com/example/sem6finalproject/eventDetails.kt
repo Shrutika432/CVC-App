@@ -6,7 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.TextView
 import android.widget.Toast
+
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentChange
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_donor_report.*
 import kotlinx.android.synthetic.main.activity_event_details.*
@@ -19,8 +24,23 @@ class eventDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_details)
-        var event:Event? = intent.getSerializableExtra("event") as? Event
+        var event: Event? = intent.getSerializableExtra("event") as? Event
         readEvent(event)
+        var user = FirebaseAuth.getInstance().currentUser
+
+        eventDetailsYesBtn.setOnClickListener {
+            val eventDB: DocumentReference =
+                FirebaseFirestore.getInstance().collection("createEvent").document(event!!.id)
+
+            eventDB.update("volunteers", FieldValue.arrayUnion(user!!.uid)).addOnSuccessListener {
+                    Toast.makeText(this,  "Thank you for being in this event!", Toast.LENGTH_LONG).show()
+                }.addOnFailureListener{e->
+                Toast.makeText(this,  e.toString(), Toast.LENGTH_LONG).show()
+
+            }
+
+        }
+
 
         joinevent.setOnClickListener {
             val mDialogView = LayoutInflater.from(this).inflate(R.layout.joinconfirmation, null)
@@ -44,14 +64,13 @@ class eventDetails : AppCompatActivity() {
         }
     }
 
-    fun readEvent(event:Event?)
-    {
-        var firestore=FirebaseFirestore.getInstance()
-        var eventdec=findViewById<TextView>(R.id.eventdec)
-        var eventdate=findViewById<TextView>(R.id.eventdate)
-        var area=findViewById<TextView>(R.id.eventarea)
-        var nov=findViewById<TextView>(R.id.eventnov)
-        var points=findViewById<TextView>(R.id.eventpoints)
+    fun readEvent(event: Event?) {
+        var firestore = FirebaseFirestore.getInstance()
+        var eventdec = findViewById<TextView>(R.id.eventdec)
+        var eventdate = findViewById<TextView>(R.id.eventdate)
+        var area = findViewById<TextView>(R.id.eventarea)
+        var nov = findViewById<TextView>(R.id.eventnov)
+        var points = findViewById<TextView>(R.id.eventpoints)
 
 
         eventdec.setText(event?.eventdec.toString())
