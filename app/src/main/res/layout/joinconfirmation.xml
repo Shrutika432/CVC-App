@@ -19,7 +19,7 @@
         android:orientation="horizontal"
         android:gravity="end">
         <Button
-            android:id="@+id/dialogDoneBtn"
+            android:id="@+id/eventDetailsYesBtn"
             android:text="YES"
             android:textColor="@color/White"
             android:background="@drawable/button_style"

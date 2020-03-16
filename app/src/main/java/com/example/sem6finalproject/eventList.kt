@@ -16,7 +16,7 @@ class eventList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_list)
 
-        FirebaseFirestore.getInstance().collection("createEvent").get()
+        FirebaseFirestore.getInstance().collection("events").get()
             .addOnSuccessListener { querySnapShot ->
 
                 var eventListView: ListView = this.findViewById(R.id.eventListView)

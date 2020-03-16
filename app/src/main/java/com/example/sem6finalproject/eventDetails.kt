@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 
@@ -17,6 +18,9 @@ import kotlinx.android.synthetic.main.activity_donor_report.*
 import kotlinx.android.synthetic.main.activity_event_details.*
 import kotlinx.android.synthetic.main.activity_reports_dashboard.*
 import kotlinx.android.synthetic.main.change_password.view.*
+import kotlinx.android.synthetic.main.change_password.view.dialogCancelBtn
+import kotlinx.android.synthetic.main.joinconfirmation.*
+import kotlinx.android.synthetic.main.joinconfirmation.view.*
 import java.io.Serializable
 
 class eventDetails : AppCompatActivity() {
@@ -28,20 +32,6 @@ class eventDetails : AppCompatActivity() {
         readEvent(event)
         var user = FirebaseAuth.getInstance().currentUser
 
-        eventDetailsYesBtn.setOnClickListener {
-            val eventDB: DocumentReference =
-                FirebaseFirestore.getInstance().collection("createEvent").document(event!!.id)
-
-            eventDB.update("volunteers", FieldValue.arrayUnion(user!!.uid)).addOnSuccessListener {
-                    Toast.makeText(this,  "Thank you for being in this event!", Toast.LENGTH_LONG).show()
-                }.addOnFailureListener{e->
-                Toast.makeText(this,  e.toString(), Toast.LENGTH_LONG).show()
-
-            }
-
-        }
-
-
         joinevent.setOnClickListener {
             val mDialogView = LayoutInflater.from(this).inflate(R.layout.joinconfirmation, null)
             //AlertDialogBuilder
@@ -49,10 +39,22 @@ class eventDetails : AppCompatActivity() {
                 .setView(mDialogView)
                 .setTitle("Confirmation")
             //show dialog
-            val  mAlertDialog = mBuilder.show()
+            val mAlertDialog = mBuilder.show()
             //login button click of custom layout
-            mDialogView.dialogDoneBtn.setOnClickListener {
-                //dismiss dialog
+            mDialogView.eventDetailsYesBtn.setOnClickListener {
+                val eventDB: DocumentReference =
+                    FirebaseFirestore.getInstance().collection("events").document(event!!.id)
+
+                eventDB.update("volunteers", FieldValue.arrayUnion(user!!.uid))
+                    .addOnSuccessListener {
+                        Toast.makeText(
+                            this,
+                            "Thank you for being in this event!",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }.addOnFailureListener { e ->
+                    Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+                }
                 mAlertDialog.dismiss()
 
             }
