@@ -74,31 +74,12 @@ class eventDetails : AppCompatActivity() {
         var nov = findViewById<TextView>(R.id.eventnov)
         var points = findViewById<TextView>(R.id.eventpoints)
 
-
         eventdec.setText(event?.eventdec.toString())
         eventdate.setText(event?.eventdate.toString())
         area.setText(event?.area.toString())
         nov.setText(event?.nov.toString())
         points.setText(event?.points.toString())
 
-
-//        firestore.collection("donordetails").document(id.toString()).get()
-//            .addOnSuccessListener {document ->
-//
-//                var data:Donor?=document.toObject(Donor::class.java)
-//                Dname.setText(data?.Dname.toString())
-//                Dcontact.setText(data?.Dcontact.toString())
-//                Demail.setText(data?.Demail.toString())
-//                Dpurpose.setText(data?.Dpurpose.toString())
-//                Daddress.setText(data?.Daddress.toString())
-//                Dpanno.setText(data?.DPanNo.toString())
-//                Dpayoption.setText(data?.DPayOption.toString())
-//
-//            }
-//            .addOnFailureListener {
-//                Toast.makeText(this,"data not found",Toast.LENGTH_LONG).show()
-//
-//            }
     }
 
 }

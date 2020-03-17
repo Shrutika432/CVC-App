@@ -10,17 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".intrested_Volunteer"></activity>
-        <activity android:name=".Upcoming_event" />
         <activity android:name=".eventDetails" />
         <activity android:name=".eventList" />
         <activity android:name=".volunteerReport" />
-        <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".volunteerList" />
         <activity android:name=".DonorList" />
         <activity android:name=".donorReport" />
         <activity android:name=".profile" />
         <activity android:name=".reports_dashboard" />
-        <activity android:name=".removeAccount" />
         <activity android:name=".cloudmessage" />
         <activity android:name=".Donationform" />
         <activity android:name=".SignupConformationActivity" />
