@@ -75,6 +75,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            app:cardCornerRadius="13dp"
                             android:orientation="vertical"
                             android:layout_marginRight="5dp"
                             android:layout_gravity="center">
@@ -126,6 +127,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            app:cardCornerRadius="13dp"
                             android:orientation="vertical"
                             android:layout_marginLeft="5dp"
                             android:layout_gravity="center">
@@ -189,6 +191,8 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            app:cardCornerRadius="13dp"
+
                             android:orientation="vertical"
                             android:layout_marginRight="5dp"
                             android:layout_gravity="center">

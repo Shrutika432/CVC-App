@@ -31,39 +31,42 @@ class eventDetails : AppCompatActivity() {
         var event: Event? = intent.getSerializableExtra("event") as? Event
         readEvent(event)
         var user = FirebaseAuth.getInstance().currentUser
+        FirebaseFirestore.getInstance().collection("profile").document(user!!.uid).get().addOnSuccessListener { d->
+            val name: String = d.get("fullname").toString()
+            joinevent.setOnClickListener {
+                val mDialogView = LayoutInflater.from(this).inflate(R.layout.joinconfirmation, null)
+                //AlertDialogBuilder
+                val mBuilder = AlertDialog.Builder(this)
+                    .setView(mDialogView)
+                    .setTitle("Confirmation")
+                //show dialog
+                val mAlertDialog = mBuilder.show()
+                //login button click of custom layout
+                mDialogView.eventDetailsYesBtn.setOnClickListener {
+                    val eventDB: DocumentReference =
+                        FirebaseFirestore.getInstance().collection("events").document(event!!.id)
 
-        joinevent.setOnClickListener {
-            val mDialogView = LayoutInflater.from(this).inflate(R.layout.joinconfirmation, null)
-            //AlertDialogBuilder
-            val mBuilder = AlertDialog.Builder(this)
-                .setView(mDialogView)
-                .setTitle("Confirmation")
-            //show dialog
-            val mAlertDialog = mBuilder.show()
-            //login button click of custom layout
-            mDialogView.eventDetailsYesBtn.setOnClickListener {
-                val eventDB: DocumentReference =
-                    FirebaseFirestore.getInstance().collection("events").document(event!!.id)
+                    eventDB.update("volunteers", FieldValue.arrayUnion(name))
+                        .addOnSuccessListener {
+                            Toast.makeText(
+                                this,
+                                "Thank you for being in this event!",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }.addOnFailureListener { e ->
+                            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+                        }
+                    mAlertDialog.dismiss()
 
-                eventDB.update("volunteers", FieldValue.arrayUnion(user!!.uid))
-                    .addOnSuccessListener {
-                        Toast.makeText(
-                            this,
-                            "Thank you for being in this event!",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }.addOnFailureListener { e ->
-                    Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
                 }
-                mAlertDialog.dismiss()
-
-            }
-            //cancel button click of custom layout
-            mDialogView.dialogCancelBtn.setOnClickListener {
-                //dismiss dialog
-                mAlertDialog.dismiss()
+                //cancel button click of custom layout
+                mDialogView.dialogCancelBtn.setOnClickListener {
+                    //dismiss dialog
+                    mAlertDialog.dismiss()
+                }
             }
         }
+
     }
 
     fun readEvent(event: Event?) {
@@ -83,4 +86,3 @@ class eventDetails : AppCompatActivity() {
     }
 
 }
-

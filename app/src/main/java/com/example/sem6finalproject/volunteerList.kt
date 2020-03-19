@@ -55,7 +55,7 @@ class volunteerList : AppCompatActivity() {
         var dob = ""
         var gender = ""
         var bgroup = ""
-        var points = 0
+        var points = ""
 
     constructor()
     constructor(
@@ -66,7 +66,7 @@ class volunteerList : AppCompatActivity() {
         dob: String,
         gender: String,
         bgroup: String,
-        points: Int
+        points:String
     ) {
         this.fullname = fullname
         this.cnum = cnum

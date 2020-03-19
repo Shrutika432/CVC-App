@@ -9,6 +9,7 @@ import android.widget.ListView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FieldPath
 import com.google.firebase.firestore.FirebaseFirestore
 import java.io.Serializable
 
@@ -17,21 +18,16 @@ class eventList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_list)
-
-        FirebaseFirestore.getInstance().collection("events").get()
+        val firestore = FirebaseFirestore.getInstance()
+        firestore.collection("events").get()
             .addOnSuccessListener { querySnapShot ->
                 var eventListView: ListView = this.findViewById(R.id.eventListView)
                 var events: Array<Event?> =
                     querySnapShot.documents.map { event ->
-                            var e: Event? = event.toObject(Event::class.java)
-                            e?.id = event.id
-                        e?.volunteers?.forEach { v ->
-                            FirebaseFirestore.getInstance().collection("profile").document(v).get().addOnSuccessListener { doc->
-                                e.volunteersObj.plus(doc.toObject(Volunteer::class.java))
-                            }
-                        }
-                            return@map e
-                        }
+                        var e: Event? = event.toObject(Event::class.java)
+                        e?.id = event.id
+                        return@map e
+                    }
                         .toTypedArray()
                 var eventNames: Array<String?> = events.map { event -> event?.eventdec }.toTypedArray()
 
@@ -44,18 +40,18 @@ class eventList : AppCompatActivity() {
                     var profile: DocumentSnapshot;
                     FirebaseFirestore.getInstance().collection("profile").document(uid.toString())
                         .get().addOnSuccessListener { doc ->
-                        profile = doc;
-                        var isAdmin = profile["isAdmin"];
-                        if (isAdmin != true) {
-                            var intent = Intent(this, eventDetails::class.java)
-                            intent.putExtra("event", events[index])
-                            startActivity(intent)
-                        } else {
-                            var intent = Intent(this, intrested_Volunteer::class.java)
-                            intent.putExtra("event", events[index])
-                            startActivity(intent)
+                            profile = doc;
+                            var isAdmin = profile["isAdmin"];
+                            if (isAdmin != true) {
+                                var intent = Intent(this, eventDetails::class.java)
+                                intent.putExtra("event", events[index])
+                                startActivity(intent)
+                            } else {
+                                var intent = Intent(this, intrested_Volunteer::class.java)
+                                intent.putExtra("event", events[index])
+                                startActivity(intent)
+                            }
                         }
-                    }
                 }
 
                 eventListView.adapter = eventListAdapter
@@ -75,7 +71,6 @@ class Event : Serializable {
     var nov = ""
     var points = ""
     var volunteers:List<String> = listOf()
-    var volunteersObj:ArrayList<Volunteer> = arrayListOf()
 
     constructor()
     constructor(
@@ -85,8 +80,7 @@ class Event : Serializable {
         eventdec: String,
         nov: String,
         points: String,
-        volunteers:List<String>,
-        volunteersObj:ArrayList<Volunteer>
+        volunteers:List<String>
 
     ) {
 
@@ -97,7 +91,6 @@ class Event : Serializable {
         this.nov = nov
         this.points = points
         this.volunteers=volunteers
-        this.volunteersObj=volunteersObj
     }
 
 }

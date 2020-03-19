@@ -1,107 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/bgcolorallpages"
-android:orientation="vertical"
-android:weightSum="10"
-tools:context=".intrested_Volunteer">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intrested_Volunteer">
 
-<ScrollView
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_marginBottom="5dp">
+
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
-
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
+                android:layout_height="200dp"
                 android:orientation="vertical"
-                android:gravity="center"
                 android:background="@drawable/background">
-
                 <TextView
-                    android:id="@+id/tveventname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="13dp"
-                    android:text="EVENT NAME "
-                    android:textAlignment="center"
+                    android:layout_marginTop="9dp"
+                    android:id="@+id/tveventdec"
                     android:textColor="@color/White"
-                    android:textSize="26dp"
-                    android:textStyle="bold"></TextView>
+                    android:textSize="20sp"
+                    android:text="Event Description"
+                    android:textStyle="bold">
+
+                </TextView>
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
                     android:id="@+id/tveventdate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="13dp"
-                    android:text="EVENT DATE"
-                    android:textColor="@color/White"
-                    android:textSize="18sp"
-                    android:textStyle="bold"></TextView>
+                    android:text="20/2/2020">
 
+                </TextView>
                 <TextView
-                    android:id="@+id/tveventarea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="13dp"
-                    android:text="EVENT AREA "
-                    android:textAlignment="center"
+                    android:layout_marginTop="9dp"
+                    android:id="@+id/tvVol"
                     android:textColor="@color/White"
                     android:textSize="18sp"
-                    android:textStyle="bold">
+                    android:text="20 Volunteers">
+
                 </TextView>
                 <TextView
-                    android:id="@+id/tveventpoints"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="13dp"
-                    android:text="POINTS"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:id="@+id/tvcity"
                     android:textColor="@color/White"
                     android:textSize="18sp"
-                    android:textStyle="bold">
+                    android:text="Manjalpur">
+
                 </TextView>
-
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="9dp"
+                    android:textColor="@color/White"
+                    android:id="@+id/tvpoints"
+                    android:textSize="18sp"
+                    android:text="50 Points">
+                </TextView>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="215dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
-
-
+                android:layout_marginTop="200dp"
+                android:orientation="vertical">
+                <ListView
+                    android:id="@+id/intVolunteerListView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </ListView>
+            </LinearLayout>
         </RelativeLayout>
-        <ListView
-            android:id="@+id/intVolunteerListView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </ListView>
-
 
     </LinearLayout>
-</ScrollView>
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -123,10 +112,11 @@ tools:context=".intrested_Volunteer">
             app:fab_colorPressed="@color/blue"
             app:fab_icon="@drawable/logout"
             app:fab_size="mini"
-            app:fab_title="Give rewards">
+            app:fab_title="GIVE REWARDS">
 
         </com.getbase.floatingactionbutton.FloatingActionButton>
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
 
 
 </RelativeLayout>
