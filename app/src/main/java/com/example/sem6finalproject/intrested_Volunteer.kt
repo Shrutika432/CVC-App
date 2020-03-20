@@ -3,11 +3,15 @@ package com.example.sem6finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_intrested__volunteer.*
+import kotlinx.android.synthetic.main.change_password.view.*
 import java.util.*
 
 class intrested_Volunteer : AppCompatActivity() {
@@ -29,6 +33,26 @@ class intrested_Volunteer : AppCompatActivity() {
 
         readEvent(event)
         volunteerList.adapter = volunteerListAdapter
+        Fab_Action_Reward.setOnClickListener {
+            val mDialogView = LayoutInflater.from(this).inflate(R.layout.change_password, null)
+            //AlertDialogBuilder
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+                .setTitle("Are you sure you want to give reward?")
+            //show dialog
+            val  mAlertDialog = mBuilder.show()
+            //login button click of custom layout
+            mDialogView.dialogDoneBtn.setOnClickListener {
+                //dismiss dialog
+                mAlertDialog.dismiss()
+
+            }
+            //cancel button click of custom layout
+            mDialogView.dialogCancelBtn.setOnClickListener {
+                //dismiss dialog
+                mAlertDialog.dismiss()
+            }
+        }
     }
     fun readEvent(event: Event?) {
         var firestore = FirebaseFirestore.getInstance()

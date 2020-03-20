@@ -4,5 +4,6 @@
     <string name="forgot_Password"><u>Forgot Password</u></string>
     <string name="want_to_donate_us"><u>want to donate us?</u></string>
     <string name="Join_event"><u>Click here to join this Campaign</u></string>
+    <string name="signup_success">CONGRATULATIONS!!\n you have gained 50 points!!!</string>
 
 </resources>

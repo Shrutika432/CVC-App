@@ -10,85 +10,189 @@
     android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="720dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="11dp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/eventdec"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/login_textformat"
-        android:inputType="text"
-        android:padding="6dp"
-        android:textColorHint="@color/btn" />
+        <ImageView
+            android:id="@+id/ImageVolunteer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/event_image">
 
-    <TextView
+        </ImageView>
+
+        <TextView
+            android:id="@+id/edec"
+            style="@style/Widget.AppCompat.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/eventdate"
-            android:layout_margin="30dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Description"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/eventdec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_textformat"
+            android:inputType="text"
+            android:textColor="@color/heading"
+            android:padding="6dp"
+            android:textColorHint="@color/btn">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/edate"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
+            android:text="Date"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/eventdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/login_textformat"
             android:inputType="date"
+            android:textColor="@color/heading"
             android:padding="6dp"
-            android:textColorHint="@color/btn"/>
+            android:textColorHint="@color/btn">
+
+        </TextView>
 
         <TextView
+            android:id="@+id/earea"
+            style="@style/Widget.AppCompat.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Area"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+        <TextView
             android:id="@+id/eventarea"
-            android:layout_margin="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="text"
-            android:padding="6dp"
-            android:textColorHint="@color/btn"/>
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/eventnov"
-            android:layout_margin="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/login_textformat"
-            android:inputType="text"
+            android:inputType="date"
+            android:textColor="@color/heading"
             android:padding="6dp"
-            android:textColorHint="@color/btn"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/eventpoints"
-            android:layout_margin="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="text"
-            android:padding="6dp"
-            android:textColorHint="@color/btn"/>
+            android:textColorHint="@color/btn">
 
+        </TextView>
+
+        <TextView
+            android:id="@+id/enov"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Number of Volunteers"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/eventnov"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_textformat"
+            android:inputType="date"
+            android:textColor="@color/heading"
+            android:padding="6dp"
+            android:textColorHint="@color/btn">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/epoints"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Points"
+            android:textColor="@color/btn"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/eventpoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_textformat"
+            android:inputType="date"
+            android:textColor="@color/heading"
+            android:padding="6dp"
+            android:textColorHint="@color/btn">
+
+        </TextView>
         <TextView
             android:id="@+id/joinevent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Join_event"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
             android:textColor="#1E88E5" />
+
+
+
     </LinearLayout>
 
     </ScrollView>

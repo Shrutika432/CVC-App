@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgcolorallpages"
     tools:context=".intrested_Volunteer">
 
 
@@ -19,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:orientation="vertical"
-                android:background="@drawable/background">
+                android:background="@drawable/background_event">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -105,12 +106,12 @@
         app:fab_labelStyle="@style/customFab">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/Fab_Action_Logout"
+            android:id="@+id/Fab_Action_Reward"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_colorNormal="@color/blue"
             app:fab_colorPressed="@color/blue"
-            app:fab_icon="@drawable/logout"
+            app:fab_icon="@drawable/star_signup"
             app:fab_size="mini"
             app:fab_title="GIVE REWARDS">
 

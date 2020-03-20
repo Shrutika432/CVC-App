@@ -33,7 +33,7 @@
             android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:text="CVC Volunteering Form"
+            android:text="Create Event"
             android:textAlignment="center"
             android:textColor="@color/heading"
             android:textSize="25dp"
