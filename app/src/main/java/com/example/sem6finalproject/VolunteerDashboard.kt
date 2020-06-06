@@ -52,28 +52,28 @@ class VolunteerDashboard : AppCompatActivity() {
             var intent = Intent(this, profile::class.java)
             startActivity(intent)
         }
-        Fab_Action_ChangePass.setOnClickListener {
-            //Inflate the dialog with custom view
-            val mDialogView = LayoutInflater.from(this).inflate(R.layout.change_password, null)
-            //AlertDialogBuilder
-            val mBuilder = AlertDialog.Builder(this)
-                .setView(mDialogView)
-                .setTitle("Login Form")
-            //show dialog
-            val  mAlertDialog = mBuilder.show()
-            //login button click of custom layout
-            mDialogView.dialogDoneBtn.setOnClickListener {
-                //dismiss dialog
-                mAlertDialog.dismiss()
-
-            }
-            //cancel button click of custom layout
-            mDialogView.dialogCancelBtn.setOnClickListener {
-                //dismiss dialog
-                mAlertDialog.dismiss()
-            }
-
-        }
+//        Fab_Action_ChangePass.setOnClickListener {
+//            //Inflate the dialog with custom view
+//            val mDialogView = LayoutInflater.from(this).inflate(R.layout.change_password, null)
+//            //AlertDialogBuilder
+//            val mBuilder = AlertDialog.Builder(this)
+//                .setView(mDialogView)
+//                .setTitle("Login Form")
+//            //show dialog
+//            val  mAlertDialog = mBuilder.show()
+//            //login button click of custom layout
+//            mDialogView.dialogDoneBtn.setOnClickListener {
+//                //dismiss dialog
+//                mAlertDialog.dismiss()
+//
+//            }
+//            //cancel button click of custom layout
+//            mDialogView.dialogCancelBtn.setOnClickListener {
+//                //dismiss dialog
+//                mAlertDialog.dismiss()
+//            }
+//
+//        }
         Fab_Action_Logout.setOnClickListener {
             Toast.makeText(this,"you SignOut",Toast.LENGTH_LONG).show()
 

@@ -10,306 +10,368 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/textdonate"
-        android:layout_width="match_parent"
-        android:layout_height="720dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="11dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/ImageLoginLogo"
-            android:layout_width="130dp"
-            android:layout_height="141dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:src="@drawable/cvc_logo" />
-
-        <TextView
-            android:id="@+id/thought1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:text="Join the change"
-            android:textColor="@color/btn"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:typeface="sans" />
-
-        <TextView
-            android:id="@+id/tvDonationForm"
+        <LinearLayout
+            android:id="@+id/textdonate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/blue"
+            android:layout_height="720dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="11dp"
             android:gravity="center"
-            android:text="Donation Form"
-            android:textSize="30sp"
-            android:textColor="#ffffff"/>
-<!--            android:textColor="#050000"-->
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/ImageLoginLogo"
+                android:layout_width="130dp"
+                android:layout_height="141dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/cvc_logo" />
 
-        <TextView
-            android:id="@+id/tvDname"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Name *"
-            android:textColor="@color/btn"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:typeface="sans">
-
-        </TextView>
-        <EditText
-            android:id="@+id/textDname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="text"
-            android:padding="6dp"
-            android:textColorHint="@color/btn">
-
-        </EditText>
-        <TextView
-            android:id="@+id/tvDcontact"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Contact*"
-            android:textColor="@color/btn"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:typeface="sans">
-
-        </TextView>
-        <EditText
-            android:id="@+id/textDcontact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="phone"
-            android:padding="6dp"
-            android:textColorHint="@color/btn">
-
-        </EditText>
-        <TextView
-            android:id="@+id/tvDemail"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Email *"
-            android:textColor="@color/btn"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:typeface="sans">
-
-        </TextView>
-        <EditText
-            android:id="@+id/textDemail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="textEmailAddress"
-            android:padding="6dp"
-            android:textColorHint="@color/btn">
-
-        </EditText>
-        <TextView
-            android:id="@+id/tvDpurpose"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Purpose of donation"
-            android:textColor="@color/btn"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:typeface="sans">
-
-        </TextView>
-        <EditText
-            android:id="@+id/textDpurpose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="text"
-            android:padding="6dp"
-            android:textColorHint="@color/btn">
-
-        </EditText>
-        <TextView
-            android:id="@+id/tvDaddress"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Address"
-            android:textColor="@color/btn"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:typeface="sans">
-
-        </TextView>
-        <EditText
-            android:id="@+id/textDaddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="text"
-            android:padding="6dp"
-            android:textColorHint="@color/btn">
-
-        </EditText>
-        <TextView
-            android:id="@+id/tvDPANno"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:text="PAN NO *"
-            android:textColor="@color/btn"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:typeface="sans">
-
-        </TextView>
-        <EditText
-            android:id="@+id/textDPANno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/login_textformat"
-            android:inputType="number"
-            android:padding="6dp"
-            android:textColorHint="@color/btn">
-
-        </EditText>
-        <TextView
-            android:id="@+id/G"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Payment options"
-            android:textColor="@color/btn"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:typeface="sans">
-
-        </TextView>
-
-        <RadioGroup
-
-            android:id="@+id/GroupRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="20dp">
-
-            <RadioButton
-                android:id="@+id/Radio1"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/thought1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Net Banking"
-                android:textColor="@color/heading"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:text="Join the change"
+                android:textColor="@color/btn"
+                android:textSize="25dp"
+                android:textStyle="bold"
                 android:typeface="sans" />
 
-            <RadioButton
-                android:id="@+id/Radio2"
+            <TextView
+                android:id="@+id/tvDonationForm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="UPI"
-                android:textColor="@color/heading"
-                android:typeface="sans" />
+                android:background="@color/blue"
+                android:gravity="center"
+                android:text="Donation Form"
+                android:textSize="30sp"
+                android:textColor="#ffffff"/>
+            <!--            android:textColor="#050000"-->
 
-            <RadioButton
-                android:id="@+id/Radio3"
+
+            <TextView
+                android:id="@+id/tvDname"
+                style="@style/Widget.AppCompat.TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dabit/ATM Card"
-                android:textColor="@color/heading"
-                android:typeface="sans" />
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Name *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
 
-            <RadioButton
-                android:id="@+id/Radio4"
+            </TextView>
+            <EditText
+                android:id="@+id/textDname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Credit Card"
-                android:textColor="@color/heading"
-                android:typeface="sans" />
-            <RadioButton
-                android:id="@+id/Radio5"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+            <TextView
+                android:id="@+id/tvDcontact"
+                style="@style/Widget.AppCompat.TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cash payment"
-                android:textColor="@color/heading"
-                android:typeface="sans" />
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Contact *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <EditText
+                android:id="@+id/textDcontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="phone"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+            <TextView
+                android:id="@+id/tvDemail"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Email *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <EditText
+                android:id="@+id/textDemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+            <TextView
+                android:id="@+id/tvDpassword"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Password *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/textDpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="textPassword"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvDcpassword"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Confirm Password *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <EditText
+                android:id="@+id/textDcpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="textPassword"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvDpurpose"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Purpose of donation"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <EditText
+                android:id="@+id/textDpurpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+            <TextView
+                android:id="@+id/tvDaddress"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Address"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <EditText
+                android:id="@+id/textDaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="text"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+            <TextView
+                android:id="@+id/tvDPANno"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="PAN NO *"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <EditText
+                android:id="@+id/textDPANno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_textformat"
+                android:inputType="number"
+                android:padding="6dp"
+                android:textColorHint="@color/btn">
+
+            </EditText>
+            <TextView
+                android:id="@+id/G"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Payment options"
+                android:textColor="@color/btn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+
+            <RadioGroup
+
+                android:id="@+id/GroupRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="20dp">
+
+                <RadioButton
+                    android:id="@+id/Radio1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Net Banking"
+                    android:textColor="@color/heading"
+                    android:typeface="sans" />
+
+                <RadioButton
+                    android:id="@+id/Radio2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UPI"
+                    android:textColor="@color/heading"
+                    android:typeface="sans" />
+
+                <RadioButton
+                    android:id="@+id/Radio3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dabit/ATM Card"
+                    android:textColor="@color/heading"
+                    android:typeface="sans" />
+
+                <RadioButton
+                    android:id="@+id/Radio4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Credit Card"
+                    android:textColor="@color/heading"
+                    android:typeface="sans" />
+                <RadioButton
+                    android:id="@+id/Radio5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash payment"
+                    android:textColor="@color/heading"
+                    android:typeface="sans" />
 
 
-        </RadioGroup>
-        <Button
-            android:id="@+id/btnDonation"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/button_style"
-            android:gravity="center"
-            android:text="Donate"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:textSize="17dp" />
+            </RadioGroup>
+            <Button
+                android:id="@+id/btnDonation"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_style"
+                android:gravity="center"
+                android:text="Donate"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="17dp" />
 
 
-    </LinearLayout>
+        </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
+
 </RelativeLayout>

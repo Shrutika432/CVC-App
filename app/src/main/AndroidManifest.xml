@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/cvclogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".intrested_Volunteer"></activity>
+        <activity android:name=".donorDasgboard"></activity>
+        <activity android:name=".intrested_Volunteer" />
         <activity android:name=".eventDetails" />
         <activity android:name=".eventList" />
         <activity android:name=".volunteerReport" />

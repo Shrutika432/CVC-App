@@ -48,6 +48,13 @@ class eventDetails : AppCompatActivity() {
 
                     eventDB.update("volunteers", FieldValue.arrayUnion(name))
                         .addOnSuccessListener {
+                            var user=FirebaseAuth.getInstance().currentUser
+                            var currentProfile=FirebaseFirestore.getInstance().collection("profile").document(user!!.uid)
+                            currentProfile.get().addOnSuccessListener {ds->
+                                var points=ds.data!!.get("Points").toString().toInt()
+                                currentProfile.update("Points",points+event.points.toInt())
+                            }
+
                             Toast.makeText(
                                 this,
                                 "Thank you for being in this event!",

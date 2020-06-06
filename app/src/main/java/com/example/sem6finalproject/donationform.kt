@@ -16,6 +16,8 @@ class Donationform : AppCompatActivity() {
         setContentView(R.layout.activity_donationform)
         btnDonation.setOnClickListener {
             submitDonationForm()
+            var intent=Intent(this,donorDasgboard::class.java)
+            startActivity(intent)
             //Toast.makeText(this,"Thank You for your Donation!!",Toast.LENGTH_LONG).show()
         }
     }
@@ -25,6 +27,8 @@ class Donationform : AppCompatActivity() {
 
         var Dname:String=findViewById<EditText>(R.id.textDname).text.toString()
         var Dcontact:String=findViewById<EditText>(R.id.textDcontact).text.toString()
+        var Dpassword:String=findViewById<EditText>(R.id.textDpassword).text.toString()
+        var Dconfirmpaassword:String=findViewById<EditText>(R.id.textDcpassword).text.toString()
         var Demail:String=findViewById<EditText>(R.id.textDemail).text.toString()
         var Dpurpose:String=findViewById<EditText>(R.id.textDpurpose).text.toString()
         var Daddress:String=findViewById<EditText>(R.id.textDaddress).text.toString()
@@ -35,6 +39,8 @@ class Donationform : AppCompatActivity() {
             "Dname" to Dname,
             "Dcontact" to Dcontact,
             "Demail" to Demail,
+            "Dpassword" to Dpassword,
+            "Dconfirmpassword" to Dconfirmpaassword,
             "Dpurpose" to Dpurpose,
             "Daddress" to Daddress,
             "DPanNo" to DPanNo,

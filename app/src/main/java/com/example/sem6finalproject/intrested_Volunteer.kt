@@ -11,7 +11,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_intrested__volunteer.*
+import kotlinx.android.synthetic.main.admingivereward_confirmation.view.*
 import kotlinx.android.synthetic.main.change_password.view.*
+import kotlinx.android.synthetic.main.change_password.view.dialogCancelBtn
 import java.util.*
 
 class intrested_Volunteer : AppCompatActivity() {
@@ -34,7 +36,7 @@ class intrested_Volunteer : AppCompatActivity() {
         readEvent(event)
         volunteerList.adapter = volunteerListAdapter
         Fab_Action_Reward.setOnClickListener {
-            val mDialogView = LayoutInflater.from(this).inflate(R.layout.change_password, null)
+            val mDialogView = LayoutInflater.from(this).inflate(R.layout.admingivereward_confirmation, null)
             //AlertDialogBuilder
             val mBuilder = AlertDialog.Builder(this)
                 .setView(mDialogView)
@@ -42,7 +44,8 @@ class intrested_Volunteer : AppCompatActivity() {
             //show dialog
             val  mAlertDialog = mBuilder.show()
             //login button click of custom layout
-            mDialogView.dialogDoneBtn.setOnClickListener {
+            mDialogView.dialogYesBtn.setOnClickListener {
+              Toast.makeText(this,"Points are given to the attended volunteers",Toast.LENGTH_LONG).show()
                 //dismiss dialog
                 mAlertDialog.dismiss()
 
