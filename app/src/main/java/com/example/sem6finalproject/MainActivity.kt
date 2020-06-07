@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
                     doc -> var profile = doc;
                 var isAdmin = profile["isAdmin"];
                 if(isAdmin != true){
-
                     Handler().postDelayed({
                         val intent=Intent(this,VolunteerDashboard::class.java)
                         startActivity(intent)
@@ -64,8 +63,6 @@ class MainActivity : AppCompatActivity() {
             },1000)
         }
 
-
-
         FirebaseInstanceId.getInstance().instanceId
             .addOnCompleteListener(OnCompleteListener { task ->
                 if (!task.isSuccessful) {
@@ -80,7 +77,12 @@ class MainActivity : AppCompatActivity() {
                 val msg = "Tokan"
                 Log.d(TAG, msg)
                 //Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+
+                val fcm = FirebaseMessaging.getInstance()
+                fcm.isAutoInitEnabled = true
+                fcm.subscribeToTopic("all").addOnSuccessListener {
+                    Toast.makeText(baseContext, "subscribed to receive all notifications", Toast.LENGTH_SHORT).show()
+                }
             })
-        FirebaseMessaging.getInstance().isAutoInitEnabled = true
     }
 }

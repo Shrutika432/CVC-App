@@ -5,6 +5,7 @@ import android.app.DatePickerDialog
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -118,11 +119,9 @@ class SignupActivity1 : AppCompatActivity() {
             Toast.makeText(this,"signup success",Toast.LENGTH_LONG).show()
 
 
-        }.addOnFailureListener{
+        }.addOnFailureListener{e ->
+            Log.e("Signup Error: ", e.toString());
                 Toast.makeText(this,"failed",Toast.LENGTH_LONG).show()
-
             }
-
-
     }
 }
